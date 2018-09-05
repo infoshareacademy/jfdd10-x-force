@@ -65,7 +65,8 @@
 
 .invitation{
     display: block;
-    margin: 300px 800px 30px 100px;
+    flex-direction: row;
+    margin: 200px 0 20px 0;    
  }
 
 .i-form{

@@ -28,14 +28,14 @@
         <div class="invitation">
             <fieldset>
                 <legend class="i-form-text">Invitation to download our application</legend>
-                <form method="POST" class="i-form">
+                <form  action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
                         First name:<br>
                     <input class="i-form-input" type="text" name="firstname" placeholder="your name" required>
                         <br> Last name:<br>
                     <input class="i-form-input" type="text" name="lastname" placeholder="your surname" required>
                         <br>E-mail:<br>
                     <input class="i-form-email" type="email" placeholder="drone@globex.com"
-                        pattern=".+@globex.com" size="30" required>
+                        pattern=".+@gmail.com" size="30" required>
                     <input type="submit" value="Submit">
                 </form>
             </fieldset>
@@ -50,7 +50,7 @@
     <script>
         window.onscroll = function () { myFunction() };
 
-        var navbar = document.getElementById("navbar");
+        var navbar = document.getElementsByClassName("navbar");
         var sticky = navbar.offsetTop;
 
         function myFunction() {
