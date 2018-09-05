@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            display: block;
+            width: auto;
+            height: auto;
+        }
+
+        .navbar {
+            background: blue;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu {
+            display: flex;
+            align-items: stretch;
+        }
+        
+        
+        @media (min-width: 400px) {
+            .navbar-item {
+            display: flex;
+            align-items: center;
+            margin: 0 120px 0 0px;
+            font-size: 20px;
+        }
+        }
+
+        .logo {
+            height: 50px;
+            width: 70px;
+            background: black;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .content {
+            height: 1000px;
+            background-image: url(image/mountain.jpg);
+            object-fit: cover;
+
+        }
+
+        .img {
+            width: 100%;
+            height: auto;
+            position: relative
+        }
+
+        .display {
+            display: flex;
+        }
+
+        .small-box-left {
+            float: left;
+            width: 310px;
+            height: 360px;
+            background: green;
+            margin: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="navbar sticky">
+            <div class="logo"></div>
+
+            <div class="menu">
+                <div class="navbar-item">main</div>
+                <div class="navbar-item">features</div>
+                <div class="navbar-item">team</div>
+                <div class="navbar-item">info</div>
+            </div>
+        </div>
+
+        <div class="content display">
+
+            <div class="small-box-left">
+                dsdsdsdasfas
+            </div>
+        </div>
+
+        <div class="display">
+            <ol>
+                <li>dsds</li>
+                <li>ddsdsdf</li>
+                <li>yggygygy</li>
+                <li>gytfdtdftf</li>
+                <li>tfyfy</li>
+                <li>gyfytfy</li>
+                <li>gy</li>
+                <li>gy</li>
+                <li>gyu</li>
+                <li>gy</li>
+                <li>g</li>
+                <li>yg</li>
+                <li>yug</li>
+                <li>yu</li>
+                <li>gy</li>
+                <li>g</li>
+                <li>yg</li>
+                <li>y</li>
+                <li>gy</li>
+                <li>gy</li>
+                <li>g</li>
+                <li>y</li>
+                <li>gy</li>
+                <li>g</li>
+                <li>y</li>
+                <li>gy</li>
+                <li>gy</li>
+                <li>ug</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>g</li>
+                <li>yg</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>gy</li>
+                <li>ug</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>g</li>
+                <li>yug</li>
+                <li>yu</li>
+                <li>g</li>
+                <li>yg</li>
+                <li>yu</li>
+                <li>gyg</li>
+                <li>y</li>
+                <li>gy</li>
+                <li>g</li>
+                <li>y</li>
+                <li>gy</li>
+                <li>gy</li>
+                <li>ug</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>g</li>
+                <li>yg</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>gy</li>
+                <li>ug</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>g</li>
+                <li>yug</li>
+                <li>yu</li>
+                <li>g</li>
+                <li>yg</li>
+                <li>yu</li>
+                <li>gyg</li>
+                <li>yu</li>
+                <li>y</li>
+                <li>gy</li>
+                <li>g</li>
+                <li>y</li>
+                <li>gy</li>
+                <li>gy</li>
+                <li>ug</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>g</li>
+                <li>yg</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>gy</li>
+                <li>ug</li>
+                <li>yu</li>
+                <li>gyug</li>
+                <li>yu</li>
+                <li>g</li>
+                <li>yug</li>
+                <li>yu</li>
+                <li>g</li>
+                <li>yg</li>
+                <li>yu</li>
+                <li>gyg</li>
+                <li>yu</li>
+                <li>yu</li>
+
+            </ol>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>
