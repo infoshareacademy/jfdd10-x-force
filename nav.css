@@ -1,0 +1,53 @@
+nav { width: 100%; text-align: center; }
+nav a { 
+	display: block; 
+	padding: 15px;
+	/*border-bottom: 1px solid #C3AA6E;*/
+    color: #F0EADC;
+    text-decoration: none;
+    flex: 1 1 0;
+}
+nav a:hover { background: #E5DAC0; color: #FFF; }
+nav li:last-child a { border-bottom: none; }
+
+/*-----------------------------------------*/
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu {
+    position: absolute;
+    background: #333;
+	/*background: #D9C9A3;*/
+	top: -46px;
+	transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	
+}
+.menu-icon {
+    padding: 10px 20px;
+    background: #333;
+	/*background: #D9C9A3;*/
+	color: #987D3E;
+	cursor: pointer;
+    float: right;
+    height: 50px;
+    top: -46px;
+    border-radius: 0 0 90px 0;
+    position: absolute;
+    transition: all .7s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+#menuToggle { display: none; }
+
+#menuToggle:checked ~ .menu { position: absolute; top: 0; }
+#menuToggle:checked ~ .menu-icon { position: absolute; top: 0; }
+

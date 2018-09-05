@@ -7,22 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="Stylesheet" type="text/css" href="style.css" />
+    <link rel="Stylesheet" type="text/css" href="nav.css" />
    
 </head>
 
 <body>
-    <div class="container">
+       
 
-        <div class="navbar sticky">
-            <div class="logo"></div>
+    <div class="wrapper">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon">&#9776;</label>
+            
 
-            <div class="menu">
-                <div class="navbar-item">main</div>
-                <div class="navbar-item">features</div>
-                <div class="navbar-item">team</div>
-                <div class="navbar-item">info</div>
-            </div>
-        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">TEAM</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">FEATURES</a></li>
+            </ul>
+        </nav>
 
         <div class="content display">
 
@@ -41,7 +46,7 @@
     <script>
         window.onscroll = function () { myFunction() };
 
-        var navbar = document.getElementById("navbar");
+        var navbar = document.getElementById("menu");
         var sticky = navbar.offsetTop;
 
         function myFunction() {

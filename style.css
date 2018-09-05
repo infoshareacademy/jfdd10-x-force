@@ -1,30 +1,8 @@
-
-.container {
-    display: block;
-    width: auto;
-    height: auto;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-.navbar {
-    background: blue;
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu {
-    display: flex;
-    align-items: stretch;
-}
-
-
-@media (min-width: 400px) {
-    .navbar-item {
-    display: flex;
-    align-items: center;
-    margin: 0 120px 0 0px;
-    font-size: 20px;
-}
-}
 
 .logo {
     height: 50px;
