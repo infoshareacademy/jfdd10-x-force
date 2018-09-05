@@ -62,3 +62,18 @@
     background: green;
     margin: 300px;
 }
+
+.invitation{
+    display: block;
+    margin: 300px 800px 30px 100px;
+ }
+
+.i-form{
+    display: flex;
+}
+.i-form-input{
+    color:  red;
+}
+.i-form-text{
+    font-size: 20px;
+}
