@@ -15,23 +15,26 @@
 
         .navbar {
             background: blue;
-            display: flex;
-            justify-content: space-between;
+
         }
 
-        .menu {
+        
+
+        @media (min-width: 600px) {
+            .navbar {
+                display: flex;
+            }
+            .navbar-item {
+                display: flex;
+                align-items: center;
+                margin: 0 120px 0 0px;
+                font-size: 20px;
+            }
+            .menu {
             display: flex;
             align-items: stretch;
         }
-        
-        
-        @media (min-width: 400px) {
-            .navbar-item {
-            display: flex;
-            align-items: center;
-            margin: 0 120px 0 0px;
-            font-size: 20px;
-        }
+
         }
 
         .logo {
