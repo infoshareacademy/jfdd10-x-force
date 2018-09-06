@@ -31,7 +31,6 @@
 
 .nav-menu {
     width: 100%; text-align: center;
-    position: absolute;
     background: #333;
 	top: -49px;
 	transition: all .3s ease-out;
@@ -60,6 +59,6 @@
 }
 
 #menuToggle { display: none; }
-#menuToggle:checked ~ .nav-menu { position: absolute; top: 0; }
+#menuToggle:checked ~ .nav-menu { position: fixed; top: 0; }
 
 
