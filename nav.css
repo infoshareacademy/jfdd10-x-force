@@ -27,7 +27,7 @@ label {
     position: absolute;
     background: #333;
 	/*background: #D9C9A3;*/
-	top: -46px;
+	top: -49px;
 	transition: all .3s ease-out;
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
@@ -45,7 +45,7 @@ label {
     top: -46px;
     border-radius: 0px 0px 90px 0px;
     position: absolute;
-    transition: all .7s ease-in-out;
+    transition: all .3s ease-in-out;
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
