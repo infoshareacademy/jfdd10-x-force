@@ -21,7 +21,7 @@
            
         
 
-        <nav class="menu">
+        <nav class="nav-menu">
             <ul>
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
@@ -29,14 +29,10 @@
                 <li><a href="#">CONTACT</a></li>
                 <li><a href="#">FEATURES</a></li>
             </ul>
-            <label for="menuToggle" class="menu-icon">&#10224;</label>
+            <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
         </nav>
 
-        <div class="content display">
-
-            
-        </div>
-
+        
         
     </div>
 
@@ -44,20 +40,7 @@
 
 
 
-    <script>
-        window.onscroll = function () { myFunction() };
-
-        var menu = document.getElementById("menu");
-        var sticky = menu.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                menu.classList.add("sticky")
-            } else {
-                menu.classList.remove("sticky");
-            }
-        }
-    </script>
+    
 </body>
 
 </html>
