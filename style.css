@@ -64,17 +64,30 @@
 }
 
 .invitation{
-    display: block;
+    text-align: center;
     flex-direction: row;
-    margin: 200px 0 20px 0;    
+    margin-top: 20%;
  }
 
 .i-form{
     display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    border: double 10px black;
+    font-size: 25px;
 }
 .i-form-input{
     color:  red;
+    justify-items: center;
+    font-size: 20px;
 }
 .i-form-text{
-    font-size: 20px;
+    font-size: 30px;
+    border: solid black
+}
+.i-text-center{
+    text-align: center;
+}
+.i-fieldset-invitation{
+    border: dashed 10px blue;
 }
