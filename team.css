@@ -12,14 +12,41 @@
 
 .t-member{
 
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #333;
+    box-shadow: 7px 50px 8px black;
 
 
 }
 
+.t-top{
+    
+    margin-top: 30px;
+}
 
 .t-member img{
     border-radius: 50%;
+    height: 130px;
+    box-shadow: 3px 3px 0px black;
+    
 }
+
+.t-bot{
+    border-radius: 10px;
+    margin: 30px 50px;
+    padding: 10px 20px;
+    background-color: #777;
+    box-shadow: 3px 3px 0px black;
+
+}
+
+
 
 
 
