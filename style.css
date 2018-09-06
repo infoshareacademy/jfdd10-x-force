@@ -1,4 +1,9 @@
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -12,68 +17,9 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-.container {
-    display: block;
-    width: auto;
-    height: auto;
-}
-
-.navbar {
-    background: blue;
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu {
-    display: flex;
-    align-items: stretch;
-}
-
-
-@media (min-width: 400px) {
-    .navbar-item {
-    display: flex;
-    align-items: center;
-    margin: 0 120px 0 0px;
-    font-size: 20px;
-}
-}
-
-.logo {
-    height: 50px;
-    width: 70px;
-    background: black;
-}
 
 .sticky {
     position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.content {
-    height: 1000px;
-    background-image: url(image/mountain.jpg);
-    object-fit: cover;
-
-}
-
-.img {
-    width: 100%;
-    height: auto;
-    position: relative
-}
-
-.display {
-    display: flex;
-}
-
-.small-box-left {
-    float: left;
-    width: 310px;
-    height: 360px;
-    background: green;
-    margin: 300px;
 }
 
 .invitation{
