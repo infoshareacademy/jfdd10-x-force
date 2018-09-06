@@ -59,6 +59,6 @@
 }
 
 #menuToggle { display: none; }
-#menuToggle:checked ~ .nav-menu { position: absolute; top: 0; }
+#menuToggle:checked ~ .nav-menu { position: fixed; top: 0; }
 
 
