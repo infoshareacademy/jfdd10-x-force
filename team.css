@@ -78,7 +78,18 @@
 
 @media (min-width: 768px) { 
 
+    .team{
+        display: flex;
+        justify-content: center;
+    }
+.t-member{
+
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+
     
+}
 
 
  }
