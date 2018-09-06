@@ -10,47 +10,29 @@
 </head>
 
 <body>
-    <div class="container">
+       
 
-        <div class="navbar sticky">
-            <div class="logo"></div>
+    <div class="wrapper">
 
-            <div class="menu">
-                <div class="navbar-item">main</div>
-                <div class="navbar-item">features</div>
-                <div class="navbar-item">team</div>
-                <div class="navbar-item">info</div>
-            </div>
-        </div>
+        <input type="checkbox" id="menuToggle">
+              
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">TEAM</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">FEATURES</a></li>
+            </ul>
 
-        <div class="content display">
+            <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
+            
+        </nav>
 
-            <div class="small-box-left">
-                dsdsdsdasfas
-            </div>
-        </div>
-
-        
+               
     </div>
 
-
-
-
-
-    <script>
-        window.onscroll = function () { myFunction() };
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
+  
 </body>
 
 </html>
