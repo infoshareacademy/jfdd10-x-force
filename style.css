@@ -63,16 +63,18 @@
 .boxy{
     width: 100%;
     height: 400px;
-    background-image: url(/tloheader.png);
+    background-image: url(/xforcelogo.jpg);
     display: flex; 
     justify-content: space-between;
+    border: 5px black
 
 }
 
 .small{
 
     width: 800px;
-    background-clip: initial;
-    margin: 30px; 
+    background-color: azure;
+    margin: 30px;
+    border: 5px black;
+    animation: backwards
 }
-
