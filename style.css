@@ -4,32 +4,3 @@
 }
 
 
-.logo {
-    height: 50px;
-    width: 70px;
-    background: black;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.content {
-    height: 1000px;
-    background-image: url(image/mountain.jpg);
-    object-fit: cover;
-
-}
-
-.img {
-    width: 100%;
-    height: auto;
-    position: relative
-}
-
-.display {
-    display: flex;
-}
-
