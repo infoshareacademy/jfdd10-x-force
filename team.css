@@ -1,56 +1,81 @@
 /* Team-section */
+
 .team{
     background-color: rgba(17, 17, 17, 0.699);
-    height: 580px;
-    margin-top:60px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    
+
+
+
 }
 
 .t-member{
 
-    background-color: rgba(0, 0, 0, 0.295);
-    height: 380px;
-    width: 250px;
-    margin: 0 20px;
-    margin-top: -70;
-    border-radius: 20px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-   
 }
 
 
-.t-member img{
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    margin-top: 10px;
-    margin-bottom: 25px;
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
-    
-    
-}
 
-.t-top{
-    display: flex;
-    justify-content: center;
-    
-}
-.t-p p{
-    color: rgb(0, 0, 0);
-    font-size: 13px;
-    padding: 5px;
-    
 
-}
 
-.t-bot{
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.212);
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.527);
+
+@media (min-width: 576px){
+
+
+    .team{
+        background-color: rgba(17, 17, 17, 0.699);
+        height: 580px;
+        margin-top:60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .t-member{
+    
+        background-color: rgba(0, 0, 0, 0.295);
+        height: 380px;
+        width: 250px;
+        margin: 0 20px;
+        margin-top: -70;
+        border-radius: 20px;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+       
+    }
     
     
+    .t-member img{
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+        
+        
+    }
+    
+    .t-top{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .t-p p{
+        color: rgb(0, 0, 0);
+        font-size: 13px;
+        padding: 5px;
+        
+    
+    }
+    
+    .t-bot{
+        margin: 20px;
+        background-color: rgba(255, 255, 255, 0.212);
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.527);
+        
+        
+    }
+
 }
