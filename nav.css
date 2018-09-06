@@ -19,8 +19,8 @@ ul {
 }
 
 label {
-    /*color: #E5DAC0s;
-    font-size: 40px;*/
+   color: #F0EADC; 
+   font-size: 25px;
 }
 
 .menu {
@@ -40,7 +40,6 @@ label {
     background: #333;
 	/*background: #D9C9A3;*/
 	cursor: pointer;
-    float: right;
     height: 70px;
     top: -46px;
     border-radius: 0px 0px 90px 0px;
