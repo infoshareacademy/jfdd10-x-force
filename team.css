@@ -25,6 +25,9 @@
 
 
 }
+.t-member:not(:first-child){
+    margin-top: 120px
+}
 
 .t-top{
     
@@ -61,6 +64,14 @@
  }
  .t-member{
     flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+ }
+
+ .t-member img{
+     height: 100px;
+     margin-left:20px;
+     margin-top: -30px;
  }
 
 }
