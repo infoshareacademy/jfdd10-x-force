@@ -9,11 +9,15 @@
     <link rel="Stylesheet" type="text/css" href="nav.css" />
     <link rel="Stylesheet" type="text/css" href="style.css" />
 </head>
-<header></header>
+<header>
+
+</header>
 
 <body>
-    <div class="wrapper ">
-
+    <div>
+        
+        <div class="wrapper">
+            
         <input type="checkbox" id="menuToggle">
         <nav class="nav-menu sticky">
             <ul>
@@ -23,11 +27,17 @@
                 <li><a href="#">CONTACT</a></li>
                 <li><a href="#">FEATURES</a></li>
             </ul>
-
+            
             <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
         </nav>
-
     </div>
+    
+    
+    <div >
+        
+        
+    </div>
+    
     <div class="invitation">
         <fieldset class="i-fieldset-invitation">
             <legend class="i-form-text">Invitation to download our application</legend>
@@ -50,18 +60,18 @@
             </form>
         </fieldset>
     </div>
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
     <script>
         window.onscroll = function () { myFunction() };
-
+        
         var navbar = document.getElementsByClassName("navbar");
         var sticky = navbar.offsetTop;
-
+        
         function myFunction() {
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky")
