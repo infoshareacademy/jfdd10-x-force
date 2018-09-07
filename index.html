@@ -13,11 +13,10 @@
 
 </header>
 
-<body>
-    <div>
-        
-        <div class="wrapper">
-            
+<body style="height: 5000px">
+
+    <div class="wrapper">
+
         <input type="checkbox" id="menuToggle">
         <nav class="nav-menu sticky">
             <ul>
@@ -27,17 +26,17 @@
                 <li><a href="#">CONTACT</a></li>
                 <li><a href="#">FEATURES</a></li>
             </ul>
-            
+
             <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
         </nav>
     </div>
-    
-    
-    <div >
-        
-        
+
+    <div class="hero">
+
     </div>
-    
+
+
+
     <div class="invitation">
         <fieldset class="i-fieldset-invitation">
             <legend class="i-form-text">Invitation to download our application</legend>
@@ -54,24 +53,27 @@
                     <label for="email">E-mail:</label>
                 </div>
                 <div class="i-form-email">
-                    <input  type="email" placeholder="drone@globex.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
+                    <input type="email" placeholder="drone@globex.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
                     <input type="submit" value="Submit">
                 </div>
             </form>
         </fieldset>
     </div>
-    
-    
-    
-    
-    
-    
+    <div class="hero">
+
+    </div>
+
+
+
+
+
+
     <script>
         window.onscroll = function () { myFunction() };
-        
+
         var navbar = document.getElementsByClassName("navbar");
         var sticky = navbar.offsetTop;
-        
+
         function myFunction() {
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky")

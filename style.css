@@ -4,6 +4,8 @@
     padding: 0px;
 }
 
+
+
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -20,13 +22,11 @@
 
 .sticky {
     position: fixed;
-    top: 0;
 }
 
 .invitation{
     text-align: center;
     flex-direction: row;
-    margin-top: 20%;
  }
 
 .i-form{
@@ -66,5 +66,5 @@
     width: 100%;
     height: 660px;
     background-image: url("img/background-image.jpg");
-    
+    background-attachment: fixed;
 }
