@@ -9,7 +9,8 @@
     <link rel="Stylesheet" type="text/css" href="nav.css" />
     <link rel="Stylesheet" type="text/css" href="style.css" />
 </head>
-<header style="height: 800px;"></header>
+<header></header>
+
 <body>
     <div class="wrapper ">
 
@@ -25,24 +26,30 @@
 
             <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
         </nav>
-        
+
     </div>
-        <div class="invitation">
-            <fieldset class="i-fieldset-invitation">
-                <legend class="i-form-text">Invitation to download our application</legend>
-                <div class="i-text-center">
-                    <p>We invite you on our first application done in html/css and javascript</p>
-                    <p>we hope that our application will be your liking and you will try our app :)</p>
+    <div class="invitation">
+        <fieldset class="i-fieldset-invitation">
+            <legend class="i-form-text">Invitation to download our application</legend>
+            <div class="i-text-center">
+                <p>We invite you on our first application done in html/css and javascript</p>
+                <p>we hope that our application will be your liking and you will try our app :)</p>
+            </div>
+            <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
+                <div>
+                    <label for="name">First name:</label>
+                    <input class="i-form-input" type="text" name="firstname" placeholder="your name" required>
+                    <label for="surname">Last name:</label>
+                    <input class="i-form-input" type="text" name="lastname" placeholder="your surname" required>
+                    <label for="email">E-mail:</label>
                 </div>
-                <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
-                    First name:
-                    <input class="i-form-input" type="text" name="firstname" placeholder="your name" required> Last name:
-                    <input class="i-form-input" type="text" name="lastname" placeholder="your surname" required> E-mail:
-                    <input class="i-form-email" type="email" placeholder="drone@globex.com" pattern=".+@gmail.com" size="30" required>
+                <div class="i-form-email">
+                    <input  type="email" placeholder="drone@globex.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
                     <input type="submit" value="Submit">
-                </form>
-            </fieldset>
-        </div>
+                </div>
+            </form>
+        </fieldset>
+    </div>
 
 
 
