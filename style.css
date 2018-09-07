@@ -98,8 +98,6 @@ body{padding-top: 50px}
  
 
 
-.gridy2{}
-
 .gridy3{
     background: greenyellow
 
@@ -120,7 +118,18 @@ body{padding-top: 50px}
 }
 
 .gridy4 .a h1 {
+
+    font-size: 100%;
+    text-shadow: 3px 2px red;
+    transition-property: text-shadow, font-size;
+    transition-duration: 1s;
 }
+
+.gridy4 .a h1:hover{
+    text-shadow: 10px 2px yellow;
+    font-size: 2em;
+}
+
 
 .gridy4 .b {
     width: 100%;
