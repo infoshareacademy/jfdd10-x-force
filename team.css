@@ -90,6 +90,8 @@
     width: 500px;
     display: flex;
     flex-wrap: wrap;
+    transition-property: margin-top, box-shadow,filter;
+    transition-duration: 1s;
     
     
     
@@ -110,5 +112,10 @@
 
 }
 
+.t-member:hover{
+    margin-top: 10px;
+    box-shadow: 0px 60px 40px rgba(0, 0, 0, 0.705);
+    filter: brightness(108%);
+}
 
  }
