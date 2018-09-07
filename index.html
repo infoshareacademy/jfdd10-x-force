@@ -8,24 +8,29 @@
     <title>Document</title>
     <link rel="Stylesheet" type="text/css" href="style.css" />
     <link rel="Stylesheet" type="text/css" href="team.css" />
-
+    <link rel="Stylesheet" type="text/css" href="nav.css" />
 </head>
 
 <body>
-    <div class="container">
+    <div class="wrapper">
 
-        <!-- <div class="navbar sticky">
-            <div class="logo"></div>
+        <input type="checkbox" id="menuToggle">
 
-            <div class="menu">
-                <div class="navbar-item">main</div>
-                <div class="navbar-item">features</div>
-                <div class="navbar-item">team</div>
-                <div class="navbar-item">info</div>
-            </div>
-        </div> -->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">TEAM</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">FEATURES</a></li>
+            </ul>
 
-        <div class="team">
+            <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
+
+        </nav>
+
+
+        <div class="t-team">
 
             <div class="t-member t-num1">
                 <div class="t-top">
@@ -81,26 +86,21 @@
 
 
 
+        
+
+
+
+        
+
+
+
+
+
+
+
     </div>
 
 
-
-
-
-    <script>
-        window.onscroll = function () { myFunction() };
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
-</body>
+    </body>
 
 </html>
