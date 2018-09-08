@@ -64,7 +64,7 @@ body{padding-top: 50px}
     height: 400px;
     background-image: url(/xforcelogo.jpg);
     display: flex; 
-    justify-content: space-between;
+    justify-content: space-around;
     
 
 }
@@ -82,24 +82,28 @@ body{padding-top: 50px}
 
     background:teal;
     font-size: 40px;
+    padding: 2%;
     text-shadow: 3px 2px red;
+    transition-property: text-shadow, font-size;
+    transition-duration: 1s;
     
-    
-    
+    }
 
-}
+
+    
+    
 .gridy1 h1{
 
     text-align: center;
     text-shadow: 3px 2px rgb(231, 56, 56);
-    
     
     }
  
 
 
 .gridy3{
-    background: greenyellow
+    background: greenyellow;
+    padding: 2%;
 
 }
 
@@ -119,15 +123,16 @@ body{padding-top: 50px}
 
 .gridy4 .a h1 {
 
-    font-size: 100%;
+    font-size: 300%;
     text-shadow: 3px 2px red;
     transition-property: text-shadow, font-size;
     transition-duration: 1s;
+
 }
 
 .gridy4 .a h1:hover{
     text-shadow: 10px 2px yellow;
-    font-size: 2em;
+    font-size: 60px;
 }
 
 
