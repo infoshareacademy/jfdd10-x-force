@@ -24,11 +24,11 @@ body{
 }
 
 .t-member{
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
     border: 1px solid rgba(0, 38, 255, 0.411);
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     border-radius: 15px;
 }
 .line{
