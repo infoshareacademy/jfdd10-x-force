@@ -62,7 +62,7 @@ body{padding-top: 50px}
 .boxy{
     width: 100%;
     height: 400px;
-    background-image: url(/xforcelogo.jpg);
+    background: white;
     display: flex; 
     justify-content: space-around;
     
@@ -80,7 +80,7 @@ body{padding-top: 50px}
   
 .gridy1{
 
-    background:teal;
+    background:#333;
     font-size: 40px;
     padding: 2%;
     text-shadow: 3px 2px red;
@@ -99,16 +99,22 @@ body{padding-top: 50px}
     
     }
  
+.gridy2{
+    background: #333
 
+}
 
 .gridy3{
-    background: greenyellow;
+    background: #333;
     padding: 2%;
 
 }
 
 .gridy4{
+    background:#333 ;
+
     display: flex;
+
 
 }
 
