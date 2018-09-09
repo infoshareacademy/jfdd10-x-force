@@ -1,149 +1,34 @@
-/* padding top tymczaswo zeby nie zachodził na belke/* */
+.FeaturesMain{
+    width: 1280px;
+    min-width: 600px;
+    height: 800px;
+    background: rgb(224, 223, 222);
+    margin: 0 auto;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
 
-body{padding-top: 50px}
-.container {
-    display: block;
-    width: auto;
-    height: auto; }
-* {
-    margin: 0px;
-    padding: 0px;
+
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-
-.sticky {
-    position: fixed;
-}
-
-.invitation{
-    text-align: center;
+.featuresBox{
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 1px;
+    border: 1px;
+    display: flex;
     flex-direction: row;
-    margin-top: 20%;
- }
-
-.i-form{
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
-    border: double 10px black;
-    font-size: 25px;
-}
-.i-form-input{
-    color:  red;
-    justify-items: center;
-    font-size: 20px;
-}
-.i-form-text{
-    font-size: 30px;
-    border: solid black
-}
-.i-text-center{
-    text-align: center;
-}
-/*FEATURES KAROL*/
-.features {
-    width: 100%;
-    height: 500px;
+    justify-content: space-between
 }
 
-.boxy{
-    width: 100%;
-    height: 400px;
-    background: white;
-    display: flex; 
-    justify-content: space-around;
-    
-
-}
-
-.small{
-
-    width: 800px;
-    margin: 5px;
-    border-style: solid;
-    
-    
-}
-  
-.gridy1{
-
-    background:#333;
-    font-size: 40px;
-    padding: 2%;
-    text-shadow: 3px 2px red;
-    transition-property: text-shadow, font-size;
-    transition-duration: 1s;
-    
-    }
-
-
-    
-    
-.gridy1 h1{
-
-    text-align: center;
-    text-shadow: 3px 2px rgb(231, 56, 56);
-    
-    }
- 
-.gridy2{
-    background: #333
-
-}
-
-.gridy3{
-    background: #333;
-    padding: 2%;
-
-}
-
-.gridy4{
-    background:#333 ;
-
-    display: flex;
-
-
-}
-
-.gridy4 .a {
-    width: 100%;
+.features{
+    width: 50%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    background: rgba(227, 239, 240, 0.87);
+    padding: 1px;
+    border: 2px solid black;
+    
 }
 
-.gridy4 .a h1 {
-
-    font-size: 300%;
-    text-shadow: 3px 2px red;
-    transition-property: text-shadow, font-size;
-    transition-duration: 1s;
-
-}
-
-.gridy4 .a h1:hover{
-    text-shadow: 10px 2px yellow;
-    font-size: 60px;
-}
-
-
-.gridy4 .b {
-    width: 100%;
-    height: 100%;
-    background: url(/giphy.gif) no-repeat center;
-}
