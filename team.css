@@ -54,6 +54,18 @@ img {
     border-radius: 15px;
 }
 
+.t-bot{
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+.t-bot p{
+    color: rgb(255, 255, 255);
+    font-family: Foncik;
+    font-size: 18px;
+}
+
 
 @media (min-width: 576px) { 
 
