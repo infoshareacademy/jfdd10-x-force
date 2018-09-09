@@ -9,11 +9,8 @@
     <link rel="Stylesheet" type="text/css" href="nav.css" />
     <link rel="Stylesheet" type="text/css" href="style.css" />
 </head>
-<header>
 
-</header>
-
-<body style="height: 500px">
+<body>
 
     <div class="wrapper">
 
@@ -31,42 +28,33 @@
         </nav>
     </div>
 
-    <div class="parallax">
 
-
-    </div>
-
-
-    <div class="invitation">
-        <fieldset class="i-fieldset-invitation">
-            <legend class="i-form-text">Invitation to download our application</legend>
-            <div class="i-text-center">
-                <p>We invite you on our first application done in html/css and javascript</p>
-                <p>we hope that our application will be your liking and you will try our app :)</p>
-            </div>
-            <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
-                <div>
-                    <label for="name">First name:</label>
-                    <input class="i-form-input" type="text" name="firstname" placeholder="your name" required>
-                    <label for="surname">Last name:</label>
-                    <input class="i-form-input" type="text" name="lastname" placeholder="your surname" required>
-                    <label for="email">E-mail:</label>
+    <header>
+        <h1>parallax effect</h1>
+        <div class="invitation">
+            <fieldset class="i-fieldset-invitation">
+                <legend class="i-form-text">Invitation to download our application</legend>
+                <div class="i-text-center">
+                    <p>We invite you on our first application done in html/css and javascript</p>
+                    <p>we hope that our application will be your liking and you will try our app :)</p>
                 </div>
-                <div class="i-form-email">
-                    <input type="email" placeholder="drone@globex.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-        </fieldset>
-    </div>
-
-
-    <div class="parallax">
-
-
-    </div>
-
-
+                <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
+                    <div>
+                        <label for="name">First name:</label>
+                        <input class="i-form-input" type="text" name="firstname" placeholder="your name" required>
+                        <label for="surname">Last name:</label>
+                        <input class="i-form-input" type="text" name="lastname" placeholder="your surname" required>
+                        <label for="email">E-mail:</label>
+                    </div>
+                    <div class="i-form-email">
+                        <input type="email" placeholder="drone@globex.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </header>
+    
 
     <script>
         window.onscroll = function () { myFunction() };
