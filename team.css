@@ -24,13 +24,16 @@ body{
 }
 
 .t-member{
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     border: 1px solid rgba(0, 38, 255, 0.411);
     margin: 0 auto;
-    margin-bottom: 8px
+    margin-bottom: 50px;
+    border-radius: 15px;
 }
-
+.line{
+    display: flex;
+}
 
 
 
