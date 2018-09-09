@@ -7,12 +7,12 @@ body{
     background-color: rgba(137, 137, 189, 0.089);
 }
 
-.header{
+.t-header{
     height: 100px;
     text-align: center;
     margin-top: 50px;
 }
-.header p{
+.t-header p{
     font-size: 35px;
     font-family: Foncik;
     word-spacing: 7px;
@@ -31,7 +31,7 @@ body{
     margin-bottom: 40px;
     border-radius: 15px;
 }
-.line{
+.t-line{
     display: flex;
 }
 
