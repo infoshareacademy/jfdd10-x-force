@@ -57,17 +57,20 @@
     list-style-type: none;
     text-shadow: 2px 2px #184455;
     max-width: 95%;
-    transition-property: font-size , rotate;
-    transform: rotate(360deg);
-    
+    transition-property: all;    
     transition-duration: 3s;
 
 }
 
 ul .LiTopL:hover{
 
+    font-display: inherit;
     font-size: 40px;
     transform: rotate(360deg);
-    color: red;
+    color:red;
+    text-decoration: underline;
+
+
+
 
 }
