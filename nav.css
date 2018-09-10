@@ -2,6 +2,7 @@
 
 
 .nav-menu a { 
+    background: #333;
 	display: block; 
 	padding: 25px;
     color: #F0EADC;
@@ -37,7 +38,8 @@
 }
 
 .nav-menu {
-    width: 37%; text-align: center;
+    width: 27%; 
+    text-align: center;
     background: #333;
     top: -69px;
     border-radius: 0 0 50px 0;
