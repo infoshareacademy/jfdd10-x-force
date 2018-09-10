@@ -28,7 +28,8 @@
 .nav-menu li:last-child a { 
     
     border-radius: 0 0 50px 0;
-
+    border: none;
+    
 }
 
 .nav-menu ul {
@@ -38,7 +39,7 @@
 }
 
 .nav-menu {
-    width: 27%; 
+    width: 24%; 
     text-align: center;
     background: #333;
     top: -69px;
@@ -85,7 +86,7 @@
 }
 
 .nav-menu {
-    top: -230px;
+    top: -330px;
     
 }    
 
