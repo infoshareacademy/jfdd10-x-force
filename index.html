@@ -41,20 +41,24 @@
                 <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
                     <div>
                         <label for="name">First name:</label>
-                        <input class="i-form-input" type="text" name="firstname" placeholder="your name" required>
+                        [req]
+                        <input class="i-form-input" type="text" name="firstname" placeholder="your name" 
+                            oninvalid="this.setCustomValidity('Enter User Name Here')" oninput="this.setCustomValidity('')" required>
                         <label for="surname">Last name:</label>
-                        <input class="i-form-input" type="text" name="lastname" placeholder="your surname" required>
+                        <input class="i-form-input" type="text" name="lastname" placeholder="your surname" 
+                            oninvalid="this.setCustomValidity('Enter Surname Here')" oninput="this.setCustomValidity('')" required>
                         <label for="email">E-mail:</label>
                     </div>
                     <div class="i-form-email">
-                        <input type="email" placeholder="drone@globex.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
+                        <input type="email" placeholder="drone@globex.com" oninvalid="this.setCustomValidity('Enter E-mail Here')"
+                            oninput="this.setCustomValidity('')" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
                         <input type="submit" value="Submit">
                     </div>
                 </form>
             </fieldset>
         </div>
     </header>
-    
+
 
     <script>
         window.onscroll = function () { myFunction() };
