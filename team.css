@@ -9,7 +9,7 @@
 }
 
 .t-team{
-    background-color: rgba(148, 148, 231, 0.089);
+    background-color: rgba(64, 64, 146, 0.274);
 }
 
 .t-header{
@@ -34,11 +34,12 @@
 .t-member{
     width: 150px;
     height: 230px;
-    border: 1px solid rgba(0, 38, 255, 0.411);
+    
     margin: 0 auto;
     margin-bottom: 40px;
     border-radius: 15px;
     background-color: rgba(0, 0, 255, 0.911);
+    box-shadow: 0px 10px 10px rgb(53, 53, 119)
 }
 .t-line{
     display: flex;
@@ -95,6 +96,50 @@ img {
 
  @media (min-width: 768px) { 
 
-    
+    .t-line{
+        display: flex;
+        
+    }
 
+    .t-header p{
+        font-size: 50px;
+    }
+
+    .t-member{
+       
+        width: 400px;
+        height: 300px;
+        
+
+    }
+    .t-bot p{
+       
+        font-size: 25px;
+        margin-top: 50px;
+
+    }
+    .t-bot p:last-child{
+        margin-top: 5px;
+    }
  }
+
+    @media (min-width:1000px) {
+
+        
+
+        .t-member{
+           
+            width: 600px;
+            height: 300px;
+            
+        }
+        .t-bot p{
+           
+            font-size: 25px;
+            margin-top: 40px;
+    
+        }
+        .t-bot p:last-child{
+            margin-top: 5px;
+        }
+        }
