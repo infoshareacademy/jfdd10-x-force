@@ -3,19 +3,16 @@
     font-family: "Foncik";
     src: url(./GraviolaSoft-Medium.otf);
 }
-*{
-    margin: 0;
-    padding: 0;
-}
+
 
 .t-team{
-    background-color: rgba(64, 64, 146, 0.274);
+    background-color: rgb(223, 213, 222);
 }
 
 .t-header{
     height: 100px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 .t-header p{
     font-size: 35px;
@@ -49,11 +46,11 @@
     text-align: center;
 }
 
-img {
+ .t-top img {
     max-width: 100%;
     max-height: 100%;
-    margin-top: 20px;
-    border-radius: 15px;
+    margin-top: -10px;
+    border-radius: 20px;
 }
 
 .t-bot{
