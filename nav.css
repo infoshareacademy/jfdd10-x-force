@@ -1,4 +1,6 @@
 
+
+
 .nav-menu a { 
 	display: block; 
 	padding: 15px;
@@ -48,7 +50,7 @@
     padding: 10px 20px;
     background: #333;
 	cursor: pointer;
-    height: 40px;
+    /* height: 40px; */
     border-radius: 0px 0px 90px 90px;
     position: absolute;
     transition: all .3s ease-in-out;
@@ -61,4 +63,22 @@
 #menuToggle { display: none; }
 #menuToggle:checked ~ .nav-menu { position: fixed; top: 0; }
 
+.nav-menu:hover {
+    top: 0;
+}
 
+
+/*Mobile styles*/
+
+@media (max-width: 576px)  {
+
+.nav-menu ul {
+    display: block;
+}
+
+.nav-menu {
+    top: -230px;
+    
+}    
+
+}
