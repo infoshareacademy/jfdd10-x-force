@@ -1,6 +1,13 @@
+* {
+    margin: 0;
+    padding 0;
+}
+
+
+
 .FeaturesMain{
-    width: 1280px;
-    min-width: 600px;
+    width: 100%;
+    min-width: 300px;
     height: 800px;
     background: rgb(224, 223, 222);
     margin: 0 auto;
@@ -69,8 +76,17 @@ ul .LiTopL:hover{
     transform: rotate(360deg);
     color:red;
     text-decoration: underline;
+}
+
+.topP{
+    background: red
+}
 
 
+.downL{
+    background: green
+}
 
-
+.downP{
+    background: orange
 }
