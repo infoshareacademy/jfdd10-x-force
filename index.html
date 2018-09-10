@@ -9,7 +9,7 @@
     <link rel="Stylesheet" type="text/css" href="nav.css" />
     <link rel="Stylesheet" type="text/css" href="style.css" />
 </head>
-<header style="height: 800px;"></header>
+<header></header>
 
 <body>
     <div class="wrapper ">
@@ -36,17 +36,40 @@
                 <p>we hope that our application will be your liking and you will try our app :)</p>
             </div>
             <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
-                First name:
-                <input class="i-form-input" type="text" name="firstname" placeholder="your name" required> Last name:
-                <input class="i-form-input" type="text" name="lastname" placeholder="your surname" required> E-mail:
-                <input class="i-form-email" type="email" placeholder="drone@globex.com" pattern=".+@gmail.com" size="30"
-                    required>
-                <input type="submit" value="Submit">
+                <div>
+                    <label for="name">First name:</label>
+                    <input class="i-form-input" type="text" name="firstname" placeholder="your name" required>
+                    <label for="surname">Last name:</label>
+                    <input class="i-form-input" type="text" name="lastname" placeholder="your surname" required>
+                    <label for="email">E-mail:</label>
+                </div>
+                <div class="i-form-email">
+                    <input  type="email" placeholder="drone@globex.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
+                    <input type="submit" value="Submit">
+                </div>
             </form>
         </fieldset>
     </div>
 
 
+
+
+
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementsByClassName("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
 </body>
 
 </html>
