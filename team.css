@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
 }
+
 .t-team{
     background-color: rgba(148, 148, 231, 0.089);
 }
@@ -31,7 +32,7 @@
 }
 
 .t-member{
-    width: 230px;
+    width: 150px;
     height: 230px;
     border: 1px solid rgba(0, 38, 255, 0.411);
     margin: 0 auto;
@@ -64,10 +65,36 @@ img {
     color: rgb(255, 255, 255);
     font-family: Foncik;
     font-size: 18px;
+    
 }
+
+
+@media (min-width: 470px) { 
+
+    .t-member{
+        width: 230px;
+    }
+
+    
+}
+
 
 
 @media (min-width: 576px) { 
 
+    .t-line2{
+        margin-top: 50px;
+    }
+
+    .t-member{
+        width: 260px;
+        height: 230px;
+    }
+ }
+
+
+ @media (min-width: 768px) { 
+
     
+
  }
