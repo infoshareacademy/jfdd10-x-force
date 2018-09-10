@@ -10,40 +10,94 @@
     <link rel="Stylesheet" type="text/css" href="style.css" />
 </head>
 
-<div class="FeaturesMain">
 
-      <div class="featuresBox">
-          <div class="features topL">
+<body>
+
+    <div class="FeaturesMain">
+        <div class="wrapper">
+
+            <input type="checkbox" id="menuToggle">
+            <nav class="nav-menu sticky">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">FEATURES</a></li>
+                </ul>
+
+                <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
+            </nav>
+        </div>
+
+        <div class="featuresBox">
+            <div class="features topL">
                 <h1>X-Force</h1>
                 <ul>
                     <li class="LiTopL">Dzięki X-Force poznasz nowych ludzi</li>
                     <li class="LiTopL">Zadbasz o swoją kondycje i zdrowie</li>
                     <li class="LiTopL">Otrzymasz motywacje dzięki której przekroszysz swoje granice</li>
-                    </ul>
-          </div>
-          <div class="features topP"></div>
-      </div>
-      <div class="featuresBox">
+                </ul>
+            </div>
+            <div class="features topP"></div>
+        </div>
+        <div class="featuresBox">
             <div class="features downL"></div>
             <div class="features downP"></div>
 
-      </div>         
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</div>    
+        </div>
 
-<body>
-   
+
+
+    </div>
+
+    <header>
+        <div class="invitation">
+            <fieldset class="i-fieldset-invitation">
+                <legend class="i-form-text">Invitation to download our application</legend>
+                <div class="i-text-center">
+                    <p>We invite you on our first application done in html/css and javascript</p>
+                    <p>we hope that our application will be your liking and you will try our app :)</p>
+                </div>
+                <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
+                    <div>
+                        <label for="name">First name:</label>
+
+                        <input class="i-form-input" type="text" name="firstname" placeholder="your name" oninvalid="this.setCustomValidity('Enter User Name Here')"
+                            oninput="this.setCustomValidity('')" required>
+                        <label for="surname">Last name:</label>
+                        <input class="i-form-input" type="text" name="lastname" placeholder="your surname" oninvalid="this.setCustomValidity('Enter Surname Here')"
+                            oninput="this.setCustomValidity('')" required>
+                        <label for="email">E-mail:</label>
+                    </div>
+                    <div class="i-form-email">
+                        <input type="email" placeholder="drone@globex.com" oninvalid="this.setCustomValidity('Enter E-mail Here')"
+                            oninput="this.setCustomValidity('')" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </header>
+
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementsByClassName("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+
+
 </body>
 
 </html>
