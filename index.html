@@ -5,29 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>X-FORCE</title>
     <link rel="Stylesheet" type="text/css" href="nav.css" />
     <link rel="Stylesheet" type="text/css" href="style.css" />
 </head>
 
+
 <body>
 
-    <div class="wrapper">
+    <div class="FeaturesMain">
+        <div class="wrapper">
 
-        <input type="checkbox" id="menuToggle">
-        <nav class="nav-menu sticky">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">TEAM</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">FEATURES</a></li>
-            </ul>
+            <input type="checkbox" id="menuToggle">
+            <nav class="nav-menu sticky">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">FEATURES</a></li>
+                </ul>
 
-            <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
-        </nav>
+                <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
+            </nav>
+        </div>
+
+        <div class="featuresBox">
+            <div class="features topL">
+                <h1>X-Force</h1>
+                <ul>
+                    <li class="LiTopL">Dzięki X-Force poznasz nowych ludzi</li>
+                    <li class="LiTopL">Zadbasz o swoją kondycje i zdrowie</li>
+                    <li class="LiTopL">Otrzymasz motywacje dzięki której przekroszysz swoje granice</li>
+                </ul>
+            </div>
+            <div class="features topP"></div>
+        </div>
+        <div class="featuresBox">
+            <div class="features downL"></div>
+            <div class="features downP"></div>
+
+        </div>
+
+
+
     </div>
-
 
     <header>
         <div class="invitation">
@@ -40,12 +62,12 @@
                 <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
                     <div>
                         <label for="name">First name:</label>
-                        
-                        <input class="i-form-input" type="text" name="firstname" placeholder="your name" 
-                            oninvalid="this.setCustomValidity('Enter User Name Here')" oninput="this.setCustomValidity('')" required>
+
+                        <input class="i-form-input" type="text" name="firstname" placeholder="your name" oninvalid="this.setCustomValidity('Enter User Name Here')"
+                            oninput="this.setCustomValidity('')" required>
                         <label for="surname">Last name:</label>
-                        <input class="i-form-input" type="text" name="lastname" placeholder="your surname" 
-                            oninvalid="this.setCustomValidity('Enter Surname Here')" oninput="this.setCustomValidity('')" required>
+                        <input class="i-form-input" type="text" name="lastname" placeholder="your surname" oninvalid="this.setCustomValidity('Enter Surname Here')"
+                            oninput="this.setCustomValidity('')" required>
                         <label for="email">E-mail:</label>
                     </div>
                     <div class="i-form-email">
@@ -73,6 +95,9 @@
             }
         }
     </script>
+
+
+
 </body>
 
 </html>
