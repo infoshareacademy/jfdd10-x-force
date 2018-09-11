@@ -42,15 +42,20 @@
             <div class="features topP"></div>
         </div>
         <div class="featuresBox">
-            <div class="features downL">
-                    
+            <div id="f-slider" class="features downL ">
+                <img class="f-mySlides" src="imgTMP/mountain.jpeg">
+                <img class="f-mySlides" src="imgTMP/mountainLake.jpeg">
+                <img class="f-mySlides" src="imgTMP/mountainppl.jpeg">
+
+                <button onclick="plusDivs(-1)">&#10094;</button>
+                <button onclick="plusDivs(1)">&#10095;</button>
             </div>
             <div class="features downP"></div>
-            
+
         </div>
     </header>
 
-   
+
 
     <div class="t-team">
         <div class="t-header">
@@ -107,47 +112,54 @@
         </div>
     </div>
     <header>
-            <div class="invitation">
-                <fieldset class="i-fieldset-invitation">
-                    <legend class="i-form-text">Invitation to download our application</legend>
-                    <div class="i-text-center">
-                        <p>We invite you on our first application done in html/css and javascript</p>
-                        <p>we hope that our application will be your liking and you will try our app :)</p>
+        <div class="invitation">
+            <fieldset class="i-fieldset-invitation">
+                <legend class="i-form-text">Invitation to download our application</legend>
+                <div class="i-text-center">
+                    <p>We invite you on our first application done in html/css and javascript</p>
+                    <p>we hope that our application will be your liking and you will try our app :)</p>
+                </div>
+                <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
+                    <div>
+                        <label for="name">First name:</label>
+
+                        <input class="i-form-input" type="text" name="firstname" placeholder="your name" oninvalid="this.setCustomValidity('Enter User Name Here')"
+                            oninput="this.setCustomValidity('')" required>
+                        <label for="surname">Last name:</label>
+                        <input class="i-form-input" type="text" name="lastname" placeholder="your surname" oninvalid="this.setCustomValidity('Enter Surname Here')"
+                            oninput="this.setCustomValidity('')" required>
+                        <label for="email">E-mail:</label>
                     </div>
-                    <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
-                        <div>
-                            <label for="name">First name:</label>
-    
-                            <input class="i-form-input" type="text" name="firstname" placeholder="your name" oninvalid="this.setCustomValidity('Enter User Name Here')"
-                                oninput="this.setCustomValidity('')" required>
-                            <label for="surname">Last name:</label>
-                            <input class="i-form-input" type="text" name="lastname" placeholder="your surname" oninvalid="this.setCustomValidity('Enter Surname Here')"
-                                oninput="this.setCustomValidity('')" required>
-                            <label for="email">E-mail:</label>
-                        </div>
-                        <div class="i-form-email">
-                            <input type="email" placeholder="drone@globex.com" oninvalid="this.setCustomValidity('Enter E-mail Here')"
-                                oninput="this.setCustomValidity('')" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
-                            <input type="submit" value="Submit">
-                        </div>
-                    </form>
-                </fieldset>
-            </div>
-        </header>
+                    <div class="i-form-email">
+                        <input type="email" placeholder="drone@globex.com" oninvalid="this.setCustomValidity('Enter E-mail Here')"
+                            oninput="this.setCustomValidity('')" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </header>
 
 
 
     <script>
-        window.onscroll = function () { myFunction() };
+        function changeImg(img, i) {
+            img.setAttribute("src", "img/" + i + ".jpg");
+        }
 
-        var navbar = document.getElementsByClassName("navbar");
-        var sticky = navbar.offsetTop;
+        function imgSlider() {
+            var img = document.getElementsByClassName("f-mySlides");
+            var targetDiv = document.getElementById("f-slider");
 
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
+            img.setAttribute("width", "100%");
+            img.setAttribute("height", "70%");
+
+            img.style.left = 100;
+
+            targetDiv.appendChild(img);
+
+            for (i = 1; i < 4; i++) {
+                setInterval(changeImg(img, i), 3000);
             }
         }
     </script>

@@ -2,7 +2,21 @@
     margin: 0;
     padding: 0;
 }
-
+#f-slider{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    border-radius: 4px;
+    width: 44%;
+    height: 300px;
+  
+}
+.f-mySlides {
+    transition: all 1s ease-in;
+    left: 0px; 
+    position: relative; 
+}
 
 .FeaturesMain{
     width: 100%;
@@ -15,7 +29,6 @@
 
 
 }
-
 .featuresBox{
     width: 55%;
     height: 50%;
@@ -24,10 +37,19 @@
     flex-direction: row;
 }
 
+/* .featuresBoxCross{
+    width: 38%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+} */
+
 .features{
     width: 50%;
     height: 100%;
     background: #333;
+    display: inline-flex;
 }
 
 .topL{
