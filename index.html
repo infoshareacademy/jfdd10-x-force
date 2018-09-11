@@ -19,11 +19,21 @@
         <input type="checkbox" id="menuToggle">
         <nav class="nav-menu sticky">
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">TEAM</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">FEATURES</a></li>
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#">TEAM</a>
+                </li>
+                <li>
+                    <a href="#">CONTACT</a>
+                </li>
+                <li>
+                    <a href="#">FEATURES</a>
+                </li>
             </ul>
 
             <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
@@ -41,17 +51,21 @@
         <div class="features topP">
             <img class="features_img1" src="/img/gym3.jpg" alt="">
             <img class="features_img2" src="/img/gym2.jpg" alt="">
-            <img class="features_img3" src="/img/gym1.jpg" alt="">      
-            </div>
+            <img class="features_img3" src="/img/gym1.jpg" alt="">
         </div>
     </div>
+    </div>
     <div class="featuresBox">
-        <div class="features downL"></div>
+        <div class="features downL">
+            <img class="features_img4" src="/img/gym6.jpg" alt="">
+            <img class="features_img5" src="/img/gym5.jpg" alt="">
+            <img class="features_img6" src="/img/gym4.jpg" alt="">
+        </div>
         <div class="features downP"></div>
-
+        
     </div>
 
-   
+
 
     <div class="t-team">
         <div class="t-header">
@@ -68,8 +82,12 @@
                         <p>Poczwardowski Piotr</p>
                         <p>Front end developer</p>
                         <div class="t-links">
-                            <a href="#"><i class="fa fa-github"></i></a>
-                            <a href="#"><i class="fa fa-facebook-square"></i></a>
+                            <a href="#">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -82,8 +100,12 @@
                         <p>Poczwardowski Piotr</p>
                         <p>Front end developer</p>
                         <div class="t-links">
-                            <a href="#"><i class="fa fa-github"></i></a>
-                            <a href="#"><i class="fa fa-facebook-square"></i></a>
+                            <a href="#">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -100,8 +122,12 @@
                         <p>Poczwardowski Piotr</p>
                         <p>Front end developer</p>
                         <div class="t-links">
-                            <a href="#"><i class="fa fa-github"></i></a>
-                            <a href="#"><i class="fa fa-facebook-square"></i></a>
+                            <a href="#">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -114,8 +140,12 @@
                         <p>Poczwardowski Piotr</p>
                         <p>Front end developer</p>
                         <div class="t-links">
-                            <a href="#"><i class="fa fa-github"></i></a>
-                            <a href="#"><i class="fa fa-facebook-square"></i></a>
+                            <a href="#">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -124,33 +154,33 @@
         </div>
     </div>
     <header>
-            <div class="invitation">
-                <fieldset class="i-fieldset-invitation">
-                    <legend class="i-form-text">Invitation to download our application</legend>
-                    <div class="i-text-center">
-                        <p>We invite you on our first application done in html/css and javascript</p>
-                        <p>we hope that our application will be your liking and you will try our app :)</p>
+        <div class="invitation">
+            <fieldset class="i-fieldset-invitation">
+                <legend class="i-form-text">Invitation to download our application</legend>
+                <div class="i-text-center">
+                    <p>We invite you on our first application done in html/css and javascript</p>
+                    <p>we hope that our application will be your liking and you will try our app :)</p>
+                </div>
+                <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
+                    <div>
+                        <label for="name">First name:</label>
+
+                        <input class="i-form-input" type="text" name="firstname" placeholder="your name" oninvalid="this.setCustomValidity('Enter User Name Here')"
+                            oninput="this.setCustomValidity('')" required>
+                        <label for="surname">Last name:</label>
+                        <input class="i-form-input" type="text" name="lastname" placeholder="your surname" oninvalid="this.setCustomValidity('Enter Surname Here')"
+                            oninput="this.setCustomValidity('')" required>
+                        <label for="email">E-mail:</label>
                     </div>
-                    <form action="https://formspree.io/marcin.kass10@gmail.com" method="POST" class="i-form">
-                        <div>
-                            <label for="name">First name:</label>
-    
-                            <input class="i-form-input" type="text" name="firstname" placeholder="your name" oninvalid="this.setCustomValidity('Enter User Name Here')"
-                                oninput="this.setCustomValidity('')" required>
-                            <label for="surname">Last name:</label>
-                            <input class="i-form-input" type="text" name="lastname" placeholder="your surname" oninvalid="this.setCustomValidity('Enter Surname Here')"
-                                oninput="this.setCustomValidity('')" required>
-                            <label for="email">E-mail:</label>
-                        </div>
-                        <div class="i-form-email">
-                            <input type="email" placeholder="drone@globex.com" oninvalid="this.setCustomValidity('Enter E-mail Here')"
-                                oninput="this.setCustomValidity('')" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
-                            <input type="submit" value="Submit">
-                        </div>
-                    </form>
-                </fieldset>
-            </div>
-        </header>
+                    <div class="i-form-email">
+                        <input type="email" placeholder="drone@globex.com" oninvalid="this.setCustomValidity('Enter E-mail Here')" oninput="this.setCustomValidity('')"
+                            required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </header>
 
 
 
@@ -171,30 +201,67 @@
         var img1 = document.querySelector('.features_img1');
         var img2 = document.querySelector('.features_img2');
         var img3 = document.querySelector('.features_img3');
+        var img4 = document.querySelector('.features_img4');
+        var img5 = document.querySelector('.features_img5');
+        var img6 = document.querySelector('.features_img6');
+
         var i = 0;
-        setInterval (function(){
-            if(i===3){
-                i=0;
+        var j = 0;
+        setInterval(function () {
+            
+            function anim_top_right()
+            {
+                
+
+                if (i === 3) {
+                i = 0;
             }
-            if(i===0){
-                img1.style.opacity = ('1');                
+            if (i === 0) {
+                img1.style.opacity = ('1');
                 img2.style.opacity = ('0');
                 img3.style.opacity = ('0');
             }
-            if(i===1){
+            if (i === 1) {
                 img1.style.opacity = ('0');
                 img2.style.opacity = ('1');
                 img3.style.opacity = ('0');
             }
-            if(i===2){
+            if (i === 2) {
                 img1.style.opacity = ('0');
                 img2.style.opacity = ('0');
                 img3.style.opacity = ('1');
             }
             i++
+            }
             
-console.log(i)
-        },3000)
+            function anim_bot_left()
+            {
+                
+
+                if (j === 3) {
+                j = 0;
+            }
+            if (j === 0) {
+                img4.style.opacity = ('1');
+                img5.style.opacity = ('0');
+                img6.style.opacity = ('0');
+            }
+            if (j === 1) {
+                img4.style.opacity = ('0');
+                img5.style.opacity = ('1');
+                img6.style.opacity = ('0');
+            }
+            if (j === 2) {
+                img4.style.opacity = ('0');
+                img5.style.opacity = ('0');
+                img6.style.opacity = ('1');
+            }
+            j+=0.5
+            }
+
+            anim_top_right();
+            anim_bot_left();
+        }, 3000)
     </script>
 </body>
 
