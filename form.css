@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#form {
+    height: 60vh;
+    width: 30vw;
+    background: #0188E1;
+    margin: 0 auto;
+    margin-top: 200px;
+    font-size: 35px;
+    color: wheat;
+    text-align: center;
+    position: absolute;
+
+
+}
+
+.wrapper{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#letterbefore {
+    height: 50vh;
+    width: 25vw;
+    background: aquamarine;
+    z-index: 0;
+    margin-left: 0px;
+
+    position: relative;
+    bottom: -240px;
+    right: -2px;
+
+   
+}
+
+
+
+#circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    background: #FCD056;
+    margin: 0 auto;
+    margin-top: 150px;
+    z-index: 1; 
+}
+
+#letterafter {
+    height: 50vh;
+    width: 25vw;
+    background: aquamarine;
+    z-index: 1000;
+    margin-left: 0px;
+
+    position: relative;
+    bottom: -240px;
+    right: -2px;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+
+@keyframes slidein {
+    0% {
+      margin-left: 0;
+      z-index: 0;
+    }
+
+    49% {
+        z-index: 0;
+    }
+    50% {
+        margin-left: 150px;
+        z-index: 1000;
+    }
+
+    100% {
+        margin-left: 0;
+        
+    }
+  }
