@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-#form {
+.form {
     height: 60vh;
     width: 30vw;
     background: #0188E1;
@@ -23,7 +23,7 @@
     justify-content: center;
 }
 
-#letterbefore {
+.letterbefore {
     height: 50vh;
     width: 25vw;
     background: aquamarine;
@@ -39,7 +39,7 @@
 
 
 
-#circle {
+.circle {
     height: 200px;
     width: 200px;
     border-radius: 100px;
@@ -47,9 +47,10 @@
     margin: 0 auto;
     margin-top: 150px;
     z-index: 1; 
+    cursor: pointer;
 }
 
-#letterafter {
+.letterafter {
     height: 50vh;
     width: 25vw;
     background: aquamarine;
@@ -59,7 +60,7 @@
     position: relative;
     bottom: -240px;
     right: -2px;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-name: slidein;
 }
 
@@ -74,7 +75,7 @@
         z-index: 0;
     }
     50% {
-        margin-left: 150px;
+        margin-left: 300px;
         z-index: 1000;
     }
 

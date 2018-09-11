@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="wrapper">
-        <div id="letterbefore"></div>
-    <div id="form">   
+        <div class="letterbefore"></div>
+    <div class="form">   
        <p>Subscribe!</p>  
 
-         <div id="circle">
+         <div class="circle">
 
         </div>     
     </div>
@@ -23,13 +23,13 @@
 
 <script>
 
-    var letter = document.querySelector('#letterbefore');
-    var circle = document.querySelector('#circle');
+    var letter = document.querySelector('.letterbefore');
+    var circle = document.querySelector('.circle');
 
     circle.addEventListener('click', animate )
 
     function animate() {
-        letter.classList.add('#letterafter')
+        letter.classList.toggle('letterafter')
     }
 
     
