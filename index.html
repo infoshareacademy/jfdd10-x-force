@@ -38,7 +38,12 @@
                 <li class="LiTopL">Otrzymasz motywacje dzięki której przekroszysz swoje granice</li>
             </ul>
         </div>
-        <div class="features topP"></div>
+        <div class="features topP">
+            <img class="features_img1" src="/img/gym3.jpg" alt="">
+            <img class="features_img2" src="/img/gym2.jpg" alt="">
+            <img class="features_img3" src="/img/gym1.jpg" alt="">      
+            </div>
+        </div>
     </div>
     <div class="featuresBox">
         <div class="features downL"></div>
@@ -162,6 +167,34 @@
                 navbar.classList.remove("sticky");
             }
         }
+
+        var img1 = document.querySelector('.features_img1');
+        var img2 = document.querySelector('.features_img2');
+        var img3 = document.querySelector('.features_img3');
+        var i = 0;
+        setInterval (function(){
+            if(i===3){
+                i=0;
+            }
+            if(i===0){
+                img1.style.opacity = ('1');                
+                img2.style.opacity = ('0');
+                img3.style.opacity = ('0');
+            }
+            if(i===1){
+                img1.style.opacity = ('0');
+                img2.style.opacity = ('1');
+                img3.style.opacity = ('0');
+            }
+            if(i===2){
+                img1.style.opacity = ('0');
+                img2.style.opacity = ('0');
+                img3.style.opacity = ('1');
+            }
+            i++
+            
+console.log(i)
+        },3000)
     </script>
 </body>
 
