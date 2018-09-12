@@ -118,7 +118,6 @@ ul .LiTopL:hover{
     min-height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
 }
 .hero-parallax{
     background-image: url(img/parallax-effect.jpg);
