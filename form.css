@@ -8,10 +8,23 @@ body {
     height: 1200px;
     overflow: hidden;
 }
+
+
+
+path {
+  fill: transparent;
+}
+
+text {
+  fill: #FF9800;
+}
+
+
+
 .form {
     height: 60vh;
     width: 20vw;
-    background: #0188E1;
+    background: #173e43;
     margin: 0 auto;
     margin-top: 200px;
     font-size: 35px;
@@ -31,7 +44,7 @@ body {
 .letterbefore {
     height: 50vh;
     width: 15vw;
-    background: white;
+    background: #e1e8f0;
     z-index: 0;
     margin-left: 0px;
 
@@ -59,7 +72,7 @@ body {
 .letterafter {
     height: 50vh;
     width: 15vw;
-    background: white;
+    background: #e1e8f0;
     z-index: 1000;
     margin-left: 0px;
 
@@ -76,7 +89,7 @@ body {
     width: 15vw;
     height: 50vh;
     font-size: 30px;
-    background: white;
+    background: #e1e8f0;
     /* padding: 20px; */
     
     /* padding: 30px 30px 15px 30px; */
@@ -135,11 +148,11 @@ body {
     border-bottom: 1px dashed #333;
 }
 
-.form-style-4 input[type=submit],
-.form-style-4 input[type=button]{
+/* .form-style-4 input[type=submit], */
+.send {
     display: block;
     margin: 0 auto;
-    background: #576E86;
+    background: #e62739;
     border: none;
     padding: 18px 30px 18px 30px;
     border-radius: 5px;
@@ -147,9 +160,31 @@ body {
 
     
 }
+
+.letter-sent {
+
+    height: 50vh;
+    width: 15vw;
+    background: #e1e8f0;
+    z-index: 0;
+    margin-left: 0px;
+
+    position: relative;
+    bottom: -240px;
+    right: -2px;
+    padding: 20px;
+
+    position: relative;
+    bottom: -240px;
+    right: -2px;
+    animation-duration: 2s;
+    animation-name: slideout;
+
+}
+
 .form-style-4 input[type=submit]:hover,
 .form-style-4 input[type=button]:hover{
-background: #394D61;
+background: #6ed3cf;
 
 }
 
@@ -193,3 +228,23 @@ background: #394D61;
         
     }
   }
+
+@keyframes slideout {
+
+    0% {
+        margin-left: 0;
+        z-index: 1;
+      }
+  
+      49% {
+          z-index: 1;
+      }
+      50% {
+          margin-left: -300px;
+          z-index: 0;
+      }
+  
+      100% {
+          margin-left: 0;
+      } 
+}

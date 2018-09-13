@@ -10,7 +10,7 @@
 <body>
     <div class="wrapper">
         <div class="letterbefore">
-            <form class="form-style-4" action="" method="post">
+            <form class="form-style-4" id="subscribe_form" action="" method="post">
             <label for="field1">
             <span class="enter">Enter Your Name</span><input class="nameinput" type="text" name="field1" required="true" />
             </label>
@@ -19,7 +19,7 @@
             </label>
             
             <label>
-            <span>&nbsp;</span><input type="submit" value="Send Letter" />
+            <span>&nbsp;</span><input class='send' type="submit" value="Send Letter" />
             </label>
             </form>
         </div>
@@ -38,13 +38,28 @@
 
     var letter = document.querySelector('.letterbefore');
     var circle = document.querySelector('.circle');
+    var send = document.querySelector('.send')
+    var subscribeForm = document.querySelector('#subscribe_form')
+
 
     circle.addEventListener('click', animate )
+    send.addEventListener('click', sent)
+
+
+    function sent(event) {
+        event.preventDefault()
+       if (subscribeForm.checkValidity()){
+        letter.classList.toggle('letter-sent')
+       }
+        
+
+    }
+
 
     function animate() {
         letter.classList.toggle('letterafter')
     }
-
+    
     
 
 
