@@ -30,23 +30,10 @@
     </div>
 
 
-    <div class="head-parallax">
-        <div class="head-text">
-            <span class="head-border">
-
-            </span>
-        </div>
+    <div class="container">
+        <div class="head-parallax"></div>
+        <div class="hero-parallax"></div>
     </div>
-
-
-    <div class="hero-parallax">
-        <div class="hero-text">
-            <span class="hero-border">
-                Parallax effect
-            </span>
-        </div>
-    </div>
-
 
     <section class="section section-light">
         <div class="featuresBox">
@@ -86,6 +73,7 @@
 
 
 
+
     <div class="team-parallax">
         <div class="team-text">
             <span class="team-border">
@@ -99,7 +87,7 @@
     <section class="section section-dark">
         <div class="t-team">
             <div class="t-header">
-                <p>Meet our team!</p>
+                <p class="paralaxOver">Meet our team!</p>
             </div>
             <div class="t-content">
                 <div class="t-line t-line1">
@@ -150,12 +138,16 @@
     </section>
 
     <div class="invitation-parallax">
+        <div class="bottom-parallax">
+
+        </div>
         <div class="invitation-text">
             <span class="invitation-border">
                 Parallax effect three
             </span>
         </div>
     </div>
+
 
     <section class="section section-dark">
         <div class="invitation-form">
@@ -187,20 +179,18 @@
     </section>
 
 
-
     <script>
-        window.onscroll = function () { myFunction() };
 
-        var navbar = document.getElementsByClassName("navbar");
-        var sticky = navbar.offsetTop;
+        var flyMan = document.querySelector('.head-parallax');
 
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
+        flyMan.addEventListener('scroll', function () {
+            var screenOffset = window.scrollY;
+            var parallaxOffset = screenOffset * 0.5;
+
+            flyMan.style.backgroundSize = parallaxOffset * 1.8 + 'px';
+
+        })
+
     </script>
 </body>
 

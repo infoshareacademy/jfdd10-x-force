@@ -111,30 +111,59 @@ ul .LiTopL:hover{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    z-index: -1;
 }
 .head-parallax{
     background-image: url(img/GoscKartonoyParalaksa.png);
     background-repeat: no-repeat;
-    box-sizing: border-box;
-    width: 100%;
-    height: 80%;
-    background-color: #184455;
-    z-index: -1;
+    background-position: center;
+    background-size: cover;
     background-attachment: fixed;
-    overflow: visible;
-    background-size: 70vh;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position-y: -10px;
+    z-index: 111;
+    background-attachment: fixed;
+    overflow: visible ;
+    background-size: 60vh;
+}
 
+.bottom-parallax{
+    background-image: url(img/GoscKartonoyParalaksa.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+    overflow: visible ;
+    background-size: 90vh;
+}
+
+.paralaxOver{
+    z-index: 1000;
+    position: relative;
+    text-align: center;
 }
 
 
 .hero-parallax{
-    background-image: url(img/parallax-effect.jpg);
-    min-height: 100%;
+    background-image: url(img/city.jpg);
+    /* min-height: 100%; */
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
 }
     
 .team-parallax{
-    background-image: url(img/background-image.jpg);
-    min-height: 400px;
+    background-image: url(img/parallax-effect.jpg);
+    min-height: 500px;
 }
 .invitation-parallax{
     background-image: url(img/training.jpg);
@@ -153,6 +182,13 @@ ul .LiTopL:hover{
 .section-dark{
     background-color: #f4f4f4;
     color: #666;
+}
+.parallax-sectionOne{
+    padding: 150px 0 0;
+    color: rgb(185, 229, 255);
+}
+.container{
+    height: 100%;
 }
 .sticky {
     position: fixed;
