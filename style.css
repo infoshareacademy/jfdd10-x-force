@@ -36,16 +36,16 @@ body, html{
 }
 
 .topL{
-    color: red;
+    background: rgba(17, 0, 255, 0.562);
+    position: relative;
+}
+.topL img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: opacity, 2s;
 }
 
-.topL h1{
-    font-size: 40px;
-    text-shadow: 2px 2px #184455;
-    text-align: center;
-    transition-duration: 6s;
-    transition-property: all
-}
 
 .topL h1:hover{
 
@@ -75,16 +75,40 @@ ul .LiTopL:hover{
 }
 
 .topP{
-    background: red
+    background: rgba(17, 0, 255, 0.562);
+    position: relative;
 }
-
-
+.topP img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: opacity, 2s;
+}
+.features_img1{
+    opacity: 1;
+}
+.features_img2{
+    opacity: 0;
+}
+.features_img3{
+    opacity: 0;
+}
 .downL{
-    background: green
+    background: rgba(17, 0, 255, 0.562);
+    
 }
 
+.features_img4{
+    opacity: 1;
+}
+.features_img5{
+    opacity: 0;
+}
+.features_img6{
+    opacity: 0;
+}
 .downP{
-    background: orange
+    background: orange;
 }
 
 

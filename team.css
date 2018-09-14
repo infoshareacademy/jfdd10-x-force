@@ -6,7 +6,7 @@
 
 
 .t-team{
-    background-color: rgb(223, 213, 222);
+    background-color: rgba(105, 79, 219, 0.116);
 }
 
 .t-header{
@@ -15,7 +15,7 @@
     padding-top: 20px;
 }
 .t-header p{
-    font-size: 35px;
+    font-size: 27px;
     font-family: Foncik;
     word-spacing: 7px;
     color: rgb(1, 1, 255);
@@ -38,19 +38,18 @@
     background-color: rgba(0, 0, 255, 0.911);
     box-shadow: 0px 10px 10px rgb(53, 53, 119)
 }
-.t-line{
-    display: flex;
-}
+
 .t-top{
-    height: 100px;
+    height: 70px;
     text-align: center;
 }
 
  .t-top img {
     max-width: 100%;
     max-height: 100%;
-    margin-top: 0px;
+    margin-top: 15px;
     border-radius: 20px;
+    border: 3px solid rgb(157, 157, 216);
 }
 
 .t-bot{
@@ -62,23 +61,56 @@
 .t-bot p{
     color: rgb(255, 255, 255);
     font-family: Foncik;
-    font-size: 18px;
+    font-size: 14px;
+    padding: 0 8px;
+    
+}
+.t-links{
+    display: flex;
+    align-items: flex-end;
+    height: 80px;
+    justify-content: space-around;
+}
+
+.t-links i{
+    color:white;
+    font-size: 22px;
     
 }
 
 
-@media (min-width: 470px) { 
+
+@media (min-width: 380px) { 
+
+    .t-header p{
+        font-size: 37px
+    }
 
     .t-member{
         width: 230px;
     }
+    .t-top{
+        height: 80px;
+    }
 
+    .t-bot p{
+        font-size: 16px;
+    }
+
+    .t-links i{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
     
 }
 
 
 
 @media (min-width: 576px) { 
+
+    .t-line{
+        display: flex;
+    }
 
     .t-line2{
         margin-top: 50px;
@@ -109,14 +141,18 @@
         
 
     }
+    .t-top{
+        height: 100px;
+    }
     .t-bot p{
        
-        font-size: 25px;
-        margin-top: 50px;
+        font-size: 22px;
+        margin-top: 5px;
 
     }
-    .t-bot p:last-child{
-        margin-top: 5px;
+    .t-links i{
+        font-size: 35px;
+        margin-bottom: -16px;
     }
  }
 
@@ -126,17 +162,67 @@
 
         .t-member{
            
-            width: 600px;
+            width: 400px;
             height: 300px;
             
+        }
+        .t-top{
+            height: 110px;
         }
         .t-bot p{
            
             font-size: 25px;
-            margin-top: 40px;
+            margin-top: 0px;
+            line-height: 23px
     
         }
         .t-bot p:last-child{
-            margin-top: 5px;
+            margin-top: 0px;
         }
+        .t-links{
+            display: inline;
+            
         }
+
+       .t-links i{
+           font-size: 40px;
+           margin: 0 45px;
+           margin-top: 50px;
+           
+       }
+        }
+        @media (min-width:1136px) {
+
+        
+
+            .t-member{
+               
+                width: 600px;
+                height: 300px;
+                
+            }
+            .t-top{
+                height: 110px;
+            }
+            .t-bot p{
+               
+                font-size: 25px;
+                margin-top: 0px;
+                line-height: 33px
+        
+            }
+            .t-bot p:last-child{
+                margin-top: 0px;
+            }
+            .t-links{
+                display: inline;
+                
+            }
+    
+           .t-links i{
+               font-size: 40px;
+               margin: 0 55px;
+               margin-top: 45px;
+               
+           }
+            }
