@@ -39,11 +39,19 @@
             <label for="menuToggle" class="nav-menu-icon">&#10224;</label>
         </nav>
     </div>
+
+
+    <div class="container">
+        <div class="head-parallax"></div>
+        <div class="hero-parallax">
+        </div>
+    </div>
+
     <div class="featuresBox">
         <div class="features topL">
-                <img class="features_img4" src="/img/gym6.jpg" alt="">
-                <img class="features_img5" src="/img/gym5.jpg" alt="">
-                <img class="features_img6" src="/img/gym4.jpg" alt="">
+            <img class="features_img4" src="/img/gym6.jpg" alt="">
+            <img class="features_img5" src="/img/gym5.jpg" alt="">
+            <img class="features_img6" src="/img/gym4.jpg" alt="">
         </div>
         <div class="features topP">
             <img class="features_img1" src="/img/gym3.jpg" alt="">
@@ -54,11 +62,23 @@
     </div>
     <div class="featuresBox">
         <div class="features downL">
-            
+
         </div>
         <div class="features downP"></div>
-        
+
     </div>
+
+
+
+
+    <div class="team-parallax">
+        <div class="team-text">
+            <span class="team-border">
+                Parallax effect two
+            </span>
+        </div>
+    </div>
+
 
 
 
@@ -160,8 +180,12 @@
             </div>
         </div>
     </div>
-    <header>
-        <div class="invitation">
+
+
+
+    <section class="section section-dark">
+        <div class="invitation-parallax">
+        <div class="invitation-form">
             <fieldset class="i-fieldset-invitation">
                 <legend class="i-form-text">Invitation to download our application</legend>
                 <div class="i-text-center">
@@ -180,18 +204,28 @@
                         <label for="email">E-mail:</label>
                     </div>
                     <div class="i-form-email">
-                        <input type="email" placeholder="drone@globex.com" oninvalid="this.setCustomValidity('Enter E-mail Here')" oninput="this.setCustomValidity('')"
-                            required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
+                        <input type="email" placeholder="drone@globex.com" oninvalid="this.setCustomValidity('Enter E-mail Here')"
+                            oninput="this.setCustomValidity('')" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
                         <input type="submit" value="Submit">
                     </div>
                 </form>
             </fieldset>
         </div>
-    </header>
-
+    </div>
+    </section>
 
 
     <script>
+
+        var flyMan = document.querySelector('.head-parallax');
+
+        window.addEventListener('scroll', function () {
+            var screenOffset = window.scrollY + 100;
+            var parallaxOffset = screenOffset * 0.9;
+
+            flyMan.style.backgroundSize = parallaxOffset * 1.3 + 'px';
+        })
+
         window.onscroll = function () { myFunction() };
 
         var navbar = document.getElementsByClassName("navbar");
@@ -215,68 +249,66 @@
         var i = 0;
         var j = 0;
         setInterval(function () {
-            
-            function anim_top_right()
-            {
-                
+
+            function anim_top_right() {
+
 
                 if (i === 3) {
-                i = 0;
+                    i = 0;
+                }
+                if (i === 0) {
+                    img1.style.opacity = ('1');
+                    img2.style.opacity = ('0');
+                    img3.style.opacity = ('0');
+                }
+                if (i === 1) {
+                    img1.style.opacity = ('0');
+                    img2.style.opacity = ('1');
+                    img3.style.opacity = ('0');
+                }
+                if (i === 2) {
+                    img1.style.opacity = ('0');
+                    img2.style.opacity = ('0');
+                    img3.style.opacity = ('1');
+                }
+                i++
             }
-            if (i === 0) {
-                img1.style.opacity = ('1');
-                img2.style.opacity = ('0');
-                img3.style.opacity = ('0');
-            }
-            if (i === 1) {
-                img1.style.opacity = ('0');
-                img2.style.opacity = ('1');
-                img3.style.opacity = ('0');
-            }
-            if (i === 2) {
-                img1.style.opacity = ('0');
-                img2.style.opacity = ('0');
-                img3.style.opacity = ('1');
-            }
-            i++
-            }
-            
-            
+
+
 
             anim_top_right();
-            
+
         }, 4000)
 
         setInterval(function () {
-            
-            
-            
-            function anim_bot_left()
-            {
-                
+
+
+
+            function anim_bot_left() {
+
 
                 if (j === 3) {
-                j = 0;
-            }
-            if (j === 0) {
-                img4.style.opacity = ('1');
-                img5.style.opacity = ('0');
-                img6.style.opacity = ('0');
-            }
-            if (j === 1) {
-                img4.style.opacity = ('0');
-                img5.style.opacity = ('1');
-                img6.style.opacity = ('0');
-            }
-            if (j === 2) {
-                img4.style.opacity = ('0');
-                img5.style.opacity = ('0');
-                img6.style.opacity = ('1');
-            }
-            j++;
+                    j = 0;
+                }
+                if (j === 0) {
+                    img4.style.opacity = ('1');
+                    img5.style.opacity = ('0');
+                    img6.style.opacity = ('0');
+                }
+                if (j === 1) {
+                    img4.style.opacity = ('0');
+                    img5.style.opacity = ('1');
+                    img6.style.opacity = ('0');
+                }
+                if (j === 2) {
+                    img4.style.opacity = ('0');
+                    img5.style.opacity = ('0');
+                    img6.style.opacity = ('1');
+                }
+                j++;
             }
 
-            
+
             anim_bot_left();
         }, 3600)
     </script>
