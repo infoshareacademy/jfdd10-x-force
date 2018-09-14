@@ -1,13 +1,13 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
-}
+} */
 
-body {
+/* body {
     background: #333;
     height: 1200px;
     overflow: hidden;
-}
+} */
 
 
 
@@ -22,11 +22,11 @@ text {
 
 
 .form {
-    height: 60vh;
-    width: 20vw;
+    height: 100%;
+    width: 100%;
     background: #173e43;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 0px;
     font-size: 35px;
     color: wheat;
     text-align: center;
@@ -39,17 +39,18 @@ text {
     display: flex;
     align-content: center;
     justify-content: center;
+    position: relative;
 }
 
 .letterbefore {
-    height: 50vh;
-    width: 15vw;
+    height: 100%;
+    width: 100%;
     background: #e1e8f0;
     z-index: 0;
     margin-left: 0px;
-
-    position: relative;
-    bottom: -240px;
+    top: 0px;
+    /* position: relative; */
+    /* bottom: -240px; */
     right: -2px;
     padding: 20px;
 
@@ -70,13 +71,13 @@ text {
 }
 
 .letterafter {
-    height: 50vh;
-    width: 15vw;
+    height: 47vh;
+    width: 100%;
     background: #e1e8f0;
     z-index: 1000;
     margin-left: 0px;
 
-    position: relative;
+    /* position: relative; */
     bottom: -240px;
     right: -2px;
     animation-duration: 2s;
@@ -86,7 +87,7 @@ text {
 
 
 .form-style-4{
-    width: 15vw;
+    width: 100%;
     height: 50vh;
     font-size: 30px;
     background: #e1e8f0;
