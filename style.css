@@ -114,7 +114,7 @@ ul .LiTopL:hover{
     z-index: -1;
 }
 .head-parallax{
-    background-image: url(img/GoscKartonoyParalaksa.png);
+    background-image: url(img/goscParalaksa.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -125,9 +125,15 @@ ul .LiTopL:hover{
     height: 100%;
     background-position-y: -10px;
     z-index: 111;
-    background-attachment: fixed;
     overflow: visible ;
-    background-size: 60vh;
+    background-size: 160px;
+}
+
+
+
+.container{
+    height: 100%;
+    display: flex;
 }
 
 .bottom-parallax{
@@ -187,9 +193,7 @@ ul .LiTopL:hover{
     padding: 150px 0 0;
     color: rgb(185, 229, 255);
 }
-.container{
-    height: 100%;
-}
+
 .sticky {
     position: fixed;
 }
