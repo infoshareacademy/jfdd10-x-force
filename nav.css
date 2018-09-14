@@ -1,6 +1,5 @@
 
 
-
 .nav-menu a { 
     background: #333;
 	display: block; 
@@ -39,6 +38,7 @@
 }
 
 .nav-menu {
+    z-index: 1000;
     width: 24%; 
     text-align: center;
     background: #333;
@@ -48,11 +48,11 @@
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	z-index: 1;
+    -o-transition: all .3s ease-in-out;
 }
 
 .nav-menu-icon {
+ 
     color: #F0EADC; 
     font-size: 25px;
     display: block;

@@ -226,18 +226,7 @@
             flyMan.style.backgroundSize = parallaxOffset * 1.3 + 'px';
         })
 
-        window.onscroll = function () { myFunction() };
-
-        var navbar = document.getElementsByClassName("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
+      
 
         var img1 = document.querySelector('.features_img1');
         var img2 = document.querySelector('.features_img2');
