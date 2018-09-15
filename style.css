@@ -196,7 +196,7 @@ ul .LiTopL:hover{
     min-height: 500px;
 }
 .invitation-parallax{
-    background-image: url(img/training.jpg);
+    
     position: relative;
     background-attachment: fixed;
     background-repeat: no-repeat;
