@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body, html{
+    height: 100%;
+    margin: 0;
+    color: #666;
+}
 
 .FeaturesMain{
     width: 100%;
@@ -18,7 +23,7 @@
 
 .featuresBox{
     width: 100%;
-    height: 50%;
+    height: 350px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -107,63 +112,6 @@ ul .LiTopL:hover{
 }
 
 
-html{
-    height: 100%;
-    overflow: hidden;
-}
-body{
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    /* perspective: 1px; */
-    transform-style: preserve-3d;
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    font-family: "Luna";
-}
-
-header{
-    box-sizing: border-box;
-    min-height: 100vh;
-    padding: 30vw 0 5vw;
-    position: relative;
-    transform-style: inherit;
-    width: 100vw;
-    backface-visibility: visible;
-}
-
-header h1{
-    margin-top: -100px;
-}
-header, header:before{
-    background: 50% 50% / cover;
-}
-
-header::before{
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    background-image: url(img/training.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    transform-origin: center center 0;
-    transform: translateZ(-1px) scale(1);
-    opacity: 0.4;;
-    min-height: 100vh;
-}
-header *{
-    font-weight: normal;
-    letter-spacing: 0.2em;
-    text-align: center;
-    margin: 0;
-    padding: 1em 0;
-}
 
 
 .col-1 {width: 8.33%;}
@@ -180,6 +128,100 @@ header *{
 .col-12 {width: 100%;}
 
 
+.hero-parallax, .team-parallax {
+    position: relative;
+    opacity: 0.70px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+.head-parallax{
+    background-image: url(img/goscParalaksa.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position-y: -10px;
+    z-index: 111;
+    overflow: visible ;
+    background-size: 160px;
+}
+
+
+
+.container{
+    height: 100%;
+    display: flex;
+}
+
+.bottom-parallax{
+    background-image: url(img/GoscKartonoyParalaksa.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+    overflow: visible ;
+    background-size: 90vh;
+}
+
+.paralaxOver{
+    z-index: 1000;
+    position: relative;
+    text-align: center;
+}
+
+
+.hero-parallax{
+    background-image: url(img/city.jpg);
+    /* min-height: 100%; */
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+    
+.team-parallax{
+    background-image: url(img/parallax-effect.jpg);
+    min-height: 500px;
+}
+.invitation-parallax{
+    background-image: url(img/training.jpg);
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 700px;
+    background-size: cover
+}
+
+.section{
+    text-align: center;
+}
+
+.section-light{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.section-dark{
+    background-color: #f4f4f4;
+    color: #666;
+}
+.parallax-sectionOne{
+    padding: 150px 0 0;
+    color: rgb(185, 229, 255);
+}
+
 .sticky {
     position: fixed;
 }
@@ -192,13 +234,22 @@ header *{
     text-shadow: 0 10px 10px black;
 }
 
+.invitation-form{
+    align-content: center;
+    margin-top: 200px;
+    position: absolute;
+    width: 100%;
+}
+
 .i-form{
     display: flex;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 10%;
     border: double 10px black;
-    font-size: 1.2em;
-    background: rgba(85, 74, 74, 0.6);
+    font-size: 1.9em;
+    background: rgba(121, 25, 25, 0.6);
+    align-content: center;
+    color: #f09023
     /* font: 20px bold ; */
 }
 .i-form-input{
@@ -212,16 +263,17 @@ header *{
     justify-content: center;
 }
 .i-form-text{
-    font-size: 30px;
-    background: rgba(41, 164, 180, 0.6);
+    font-size: 50px;
     border: solid black;
+    color: #f09023;
 }
 .i-text-center{
     text-align: center;
     margin-top: 2%;
+    font-size: 40px;
+    color: #f09023;
 }
 .i-fieldset-invitation{
-    background: rgba(61, 127, 202, 0.6);
     border: dashed 10px blue;
 }
 @media only screen and (min-width: 568px) {
