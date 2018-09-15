@@ -200,12 +200,13 @@ ul .LiTopL:hover{
     position: relative;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 700px;
+    height: 100%;
     background-size: cover
 }
 
 .section{
     text-align: center;
+    position: relative;
 }
 
 .section-light{
