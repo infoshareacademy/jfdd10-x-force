@@ -7,7 +7,7 @@
 
 .t-team{
     background-color: rgba(105, 79, 219, 0.116);
-}
+    }
 
 .t-header{
     height: 100px;
@@ -16,9 +16,9 @@
 }
 .t-header p{
     font-size: 27px;
-    font-family: Foncik;
+    font-family: Arial, Helvetica, sans-serif;
     word-spacing: 7px;
-    color: rgb(1, 1, 255);
+    color: rgb(43, 43, 51);
     font-weight: bold;
     letter-spacing: 2px;
 
@@ -26,6 +26,13 @@
 }
 .t-content{
     margin-top: 30px;
+    background-image: url(/img_Karol/teambeckraund2.jpg);
+    background-size: 100% 100%;
+    
+
+}
+.t-line1{
+    box-shadow: 0 8px 6px -6px rgb(184, 170, 125);
 }
 
 .t-member{
@@ -34,10 +41,12 @@
     
     margin: 0 auto;
     margin-bottom: 40px;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 255, 0.911);
-    box-shadow: 0px 10px 10px rgb(53, 53, 119)
+    border-radius: 1px;
+    background-image: url(/img_Karol/teambackraund1.jpg);
+    box-shadow: 0px 10px 10px rgb(221, 150, 58) ;
+    background-size: 100% 100%
 }
+
 
 .t-top{
     height: 70px;
@@ -48,8 +57,8 @@
     max-width: 100%;
     max-height: 100%;
     margin-top: 15px;
-    border-radius: 20px;
-    border: 3px solid rgb(157, 157, 216);
+    border-radius: 0px;
+    border: 3px solid rgb(226, 162, 22);
 }
 
 .t-bot{
@@ -59,7 +68,7 @@
 }
 
 .t-bot p{
-    color: rgb(255, 255, 255);
+    color: rgb(24, 23, 23);
     font-family: Foncik;
     font-size: 14px;
     padding: 0 8px;
@@ -73,7 +82,7 @@
 }
 
 .t-links i{
-    color:white;
+    color:rgb(20, 20, 20);
     font-size: 22px;
     
 }
