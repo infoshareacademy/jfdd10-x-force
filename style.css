@@ -33,10 +33,11 @@ body, html{
     width: 50%;
     height: 100%;
     background: #333;
+    box-shadow: 0px 10px 10px rgb(26, 21, 14) ;
+    
 }
 
 .topL{
-    background: rgba(17, 0, 255, 0.562);
     position: relative;
 }
 .topL img{
@@ -65,15 +66,6 @@ body, html{
 
 }
 
-ul .LiTopL:hover{
-
-    font-display: inherit;
-    font-size: 40px;
-    transform: rotate(360deg);
-    color:red;
-    text-decoration: underline;
-}
-
 .topP{
     background: rgba(17, 0, 255, 0.562);
     position: relative;
@@ -94,7 +86,7 @@ ul .LiTopL:hover{
     opacity: 0;
 }
 .downL{
-    background: rgba(17, 0, 255, 0.562);
+    background: gray;
     
 }
 
@@ -108,7 +100,7 @@ ul .LiTopL:hover{
     opacity: 0;
 }
 .downP{
-    background: orange;
+    background: grey;
 }
 
 
@@ -138,7 +130,7 @@ ul .LiTopL:hover{
     z-index: -1;
 }
 .head-parallax{
-    background-image: url(img/goscParalaksa.png);
+    background-image: url(img_Karol/GoscKartonoyParalaksa600x600.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -183,7 +175,7 @@ ul .LiTopL:hover{
 
 
 .hero-parallax{
-    background-image: url(img/city.jpg);
+    background-image: url(img_Karol/city_carton.jpg);
     /* min-height: 100%; */
     height: 100%;
     width: 100%;
@@ -192,20 +184,21 @@ ul .LiTopL:hover{
 }
     
 .team-parallax{
-    background-image: url(img/parallax-effect.jpg);
+    background-image: url(img_Karol/8gym.jpg);
     min-height: 500px;
 }
 .invitation-parallax{
-    background-image: url(img/training.jpg);
+    background-image: url(img_Karol/tranding_carton.jpg);
     position: relative;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 700px;
+    height: 100%;
     background-size: cover
 }
 
 .section{
     text-align: center;
+    position: relative;
 }
 
 .section-light{
