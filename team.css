@@ -13,19 +13,21 @@
     height: 100px;
     text-align: center;
     padding-top: 20px;
+    background: url(/img_Karol/teamba.jpg) no-repeat;
+    background-size: 100% 100%
+
 }
 .t-header p{
     font-size: 27px;
     font-family: Arial, Helvetica, sans-serif;
     word-spacing: 7px;
-    color: rgb(43, 43, 51);
+    color: rgb(157, 157, 158);
     font-weight: bold;
     letter-spacing: 2px;
 
 
 }
 .t-content{
-    margin-top: 30px;
     background-image: url(/img_Karol/teambeckraund2.jpg);
     background-size: 100% 100%;
     
@@ -43,7 +45,7 @@
     margin-bottom: 40px;
     border-radius: 1px;
     background-image: url(/img_Karol/teambackraund1.jpg);
-    box-shadow: 0px 10px 10px rgb(221, 150, 58) ;
+    box-shadow: 0px 10px 20px rgb(102, 45, 28) ;
     background-size: 100% 100%
 }
 
@@ -58,7 +60,7 @@
     max-height: 100%;
     margin-top: 15px;
     border-radius: 0px;
-    border: 3px solid rgb(226, 162, 22);
+    border: 2px solid rgb(78, 75, 71);
 }
 
 .t-bot{

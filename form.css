@@ -21,6 +21,7 @@ text {
     color: wheat;
     text-align: center;
     position: absolute;
+    box-shadow: 3px 3px 23px 6px rgb(78, 78, 78);
     /* padding: 30px; */
 
 }
@@ -42,6 +43,7 @@ text {
     bottom: -240px;
     right: -2px;
     padding: 20px;
+    box-shadow: 3px 3px 23px 6px rgb(78, 78, 78);
 
    
 }
@@ -61,8 +63,13 @@ text {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: flex-end
+    align-content: flex-end;
+    transition-property: all;
+    transition-duration: inherit;
 }
+
+.circle :hover{
+    box-shadow: 0px 2px 280px rgb(221, 150, 58) ;}
 
   
 .circle p{
@@ -70,11 +77,14 @@ text {
     align-self: center;
     color: red;
     transition-property: all;
-    transition-duration: inherit
+    transition-duration: inherit;
 }
 
-..circle p:hover{
-    font-size: 40px
+
+
+.circle p:hover{
+    font-size: 40px;
+
 }
    
 
