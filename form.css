@@ -14,7 +14,7 @@ text {
 .form {
     height: 60vh;
     width: 20vw;
-    background: #173e43;
+    background: rgb(2, 31, 94);
     margin: 0 auto;
     margin-top: 200px;
     font-size: 35px;
@@ -29,6 +29,7 @@ text {
     display: flex;
     position: absolute;
     margin: 0 50% 0 40%;
+    
 }
 
 .letterbefore {
@@ -49,10 +50,10 @@ text {
 
 
 .circle {
-    height: 200px;
+    height: 100px;
     width: 200px;
-    border-radius: 100px;
-    background: #FCD056;
+    border-radius: 10px;
+    background: rgb(219, 58, 58);
     margin: 0 auto;
     margin-top: 150px;
     z-index: 1; 

@@ -94,7 +94,7 @@ ul .LiTopL:hover{
     opacity: 0;
 }
 .downL{
-    background: rgba(17, 0, 255, 0.562);
+    background: rgb(219, 58, 58);
     
 }
 
@@ -108,8 +108,8 @@ ul .LiTopL:hover{
     opacity: 0;
 }
 .downP{
-    background: url(/img/gymb.jpg);
-    background-size: cover;
+    background: rgba(207, 233, 255, 0.795);
+    
 }
 
 
@@ -202,7 +202,8 @@ ul .LiTopL:hover{
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100%;
-    background-size: cover
+    background-size: cover;
+    background: rgba(207, 233, 255, 0.795);
 }
 
 .section{
