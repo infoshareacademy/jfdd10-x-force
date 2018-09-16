@@ -73,7 +73,7 @@ text {
     transition: background-color, 0.5s;
 }
 .circle:hover{
-    background-color: rgb(250, 174, 11);;
+    background-color: rgb(219, 58, 58);
 }
 .circle p{
     font-size: 25px;
