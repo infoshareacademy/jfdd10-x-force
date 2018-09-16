@@ -1,5 +1,8 @@
 
-
+@font-face{
+    font-family: "Foncik";
+    src: url(/tmp/GraviolaSoft-Medium.otf);
+}
 
 path {
   fill: transparent;
@@ -29,6 +32,7 @@ text {
     margin-top: 20px;
     font-weight: bold;
     color: rgb(243, 234, 222);
+    font-family: Foncik;
 }
 
 .subscribe{
@@ -73,7 +77,8 @@ text {
 }
 .circle p{
     font-size: 25px;
-    padding-top: 35px
+    padding-top: 35px;
+    font-family: Foncik;
 }
 
 .letterafter {

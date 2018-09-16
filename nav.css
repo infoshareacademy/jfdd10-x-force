@@ -68,7 +68,9 @@
 	-ms-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
 }
-
+.nav-menu li a p{
+    font-family: Foncik;
+}
 #menuToggle { display: none; }
 #menuToggle:checked ~ .nav-menu { position: fixed; top: 0; }
 
