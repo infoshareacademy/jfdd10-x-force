@@ -38,6 +38,9 @@
     background-color: rgba(207, 233, 255, 0.795);
     box-shadow: 0px 10px 10px rgba(5, 30, 53, 0.733);
 }
+.t-member .m4:last-child{
+    
+}
 
 .t-top{
     height: 70px;
