@@ -2,7 +2,7 @@
 
 
 .nav-menu a { 
-    background: #333;
+    background: rgb(12, 8, 51);
 	display: block; 
 	padding: 25px;
     color: #F0EADC;
@@ -57,7 +57,7 @@
     font-size: 25px;
     display: block;
     padding: 10px 20px;
-    background: #333;
+    background: rgb(12, 8, 51);
 	cursor: pointer;
     /* height: 40px; */
     border-radius: 0px 0px 90px 90px;
