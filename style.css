@@ -108,7 +108,8 @@ ul .LiTopL:hover{
     opacity: 0;
 }
 .downP{
-    background: orange;
+    background: url(/img/gymb.jpg);
+    background-size: cover;
 }
 
 
