@@ -12,7 +12,8 @@
 .t-header{
     height: 100px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 .t-header p{
     font-size: 27px;
