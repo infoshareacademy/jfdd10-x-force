@@ -16,7 +16,7 @@ body, html{
     background: rgb(224, 223, 222);
     display: flex;
     flex-direction: column;
-    justify-content: space-between
+    justify-content: space-between;
 
 
 }
@@ -28,6 +28,8 @@ body, html{
     display: flex;
     flex-direction: row;
 }
+
+
 
 .features{
     width: 50%;
@@ -94,8 +96,15 @@ ul .LiTopL:hover{
     opacity: 0;
 }
 .downL{
-    background: rgba(17, 0, 255, 0.562);
+    background: rgba(252, 250, 244, 0.795);
+    text-align: center;
     
+    
+}
+.features_logo{
+    width: 60%;
+    height: 60%;
+    padding-top: 60px;
 }
 
 .features_img4{
@@ -108,7 +117,14 @@ ul .LiTopL:hover{
     opacity: 0;
 }
 .downP{
-    background: orange;
+    text-align: center;
+    background: rgba(252, 250, 244, 0.795);
+    
+}
+
+.features_description{
+    width: 70%;
+    height: 90%;
 }
 
 
@@ -138,7 +154,7 @@ ul .LiTopL:hover{
     z-index: -1;
 }
 .head-parallax{
-    background-image: url(img/goscParalaksa.png);
+    background-image: url(/img/gosciunowy.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -183,7 +199,7 @@ ul .LiTopL:hover{
 
 
 .hero-parallax{
-    background-image: url(img/city.jpg);
+    background-image: url(/img/city2.png);
     /* min-height: 100%; */
     height: 100%;
     width: 100%;
@@ -196,16 +212,20 @@ ul .LiTopL:hover{
     min-height: 500px;
 }
 .invitation-parallax{
-    background-image: url(img/training.jpg);
+    
     position: relative;
-    background-attachment: fixed;
+    
     background-repeat: no-repeat;
-    height: 700px;
-    background-size: cover
+    height: 100%;
+    
+    background: url(/img/tłopod.png) ;
+    background-size: cover;
+    background-color: rgba(252, 250, 244, 0.911);
 }
 
 .section{
     text-align: center;
+    position: relative;
 }
 
 .section-light{

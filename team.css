@@ -1,12 +1,12 @@
 
 @font-face{
     font-family: "Foncik";
-    src: url(./GraviolaSoft-Medium.otf);
+    src: url(/tmp/GraviolaSoft-Medium.otf);
 }
 
 
 .t-team{
-    background-color: rgba(105, 79, 219, 0.116);
+    background-color: rgb(2, 31, 94);
 }
 
 .t-header{
@@ -18,7 +18,7 @@
     font-size: 27px;
     font-family: Foncik;
     word-spacing: 7px;
-    color: rgb(1, 1, 255);
+    color: rgba(252, 250, 244, 0.911);
     font-weight: bold;
     letter-spacing: 2px;
 
@@ -35,8 +35,13 @@
     margin: 0 auto;
     margin-bottom: 40px;
     border-radius: 15px;
-    background-color: rgba(0, 0, 255, 0.911);
-    box-shadow: 0px 10px 10px rgb(53, 53, 119)
+    background-color: rgb(250, 174, 11);
+    box-shadow: 0px 10px 10px rgba(5, 30, 53, 0.733);
+    transition: background-color, 0.5s;
+}
+
+.t-member:hover{
+    background-color: rgb(41, 171, 226);
 }
 
 .t-top{
@@ -49,7 +54,7 @@
     max-height: 100%;
     margin-top: 15px;
     border-radius: 20px;
-    border: 3px solid rgb(157, 157, 216);
+    border: 3px solid rgb(207, 207, 223);
 }
 
 .t-bot{
@@ -75,7 +80,13 @@
 .t-links i{
     color:white;
     font-size: 22px;
+    transition: color, 0.5s;
     
+}
+
+.t-links i:hover{
+
+    color: rgb(2, 31, 94);;
 }
 
 
@@ -197,7 +208,7 @@
 
             .t-member{
                
-                width: 600px;
+                width: 500px;
                 height: 300px;
                 
             }
