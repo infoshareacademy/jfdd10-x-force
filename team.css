@@ -131,10 +131,9 @@
         width: 260px;
         height: 230px;
     }
- }
-
-
- @media (min-width: 768px) { 
+}
+ 
+@media (min-width: 768px) { 
 
     .t-line{
         display: flex;
@@ -165,9 +164,9 @@
         font-size: 35px;
         margin-bottom: -16px;
     }
- }
-
-    @media (min-width:1000px) {
+}
+    
+@media (min-width:1000px) {
 
         
 
@@ -201,8 +200,9 @@
            margin-top: 50px;
            
        }
-        }
-        @media (min-width:1136px) {
+    }
+        
+    @media (min-width:1136px) {
 
         
 
@@ -235,5 +235,5 @@
                margin: 0 55px;
                margin-top: 45px;
                
-           }
-            }
+        }
+    }

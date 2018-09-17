@@ -129,21 +129,6 @@ ul .LiTopL:hover{
 
 
 
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-
 .hero-parallax, .team-parallax {
     position: relative;
     opacity: 0.70px;
@@ -157,6 +142,7 @@ ul .LiTopL:hover{
     background-image: url(/img/gosciunowy.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-position-x: 47%;
     background-size: cover;
     background-attachment: fixed;
     box-sizing: border-box;
@@ -176,19 +162,9 @@ ul .LiTopL:hover{
     display: flex;
 }
 
-.bottom-parallax{
-    background-image: url(img/GoscKartonoyParalaksa.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    box-sizing: border-box;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 111;
-    overflow: visible ;
-    background-size: 90vh;
+.container-width{
+    width: 60%;
+    display: block;
 }
 
 .paralaxOver{
@@ -214,10 +190,8 @@ ul .LiTopL:hover{
 .invitation-parallax{
     
     position: relative;
-    
     background-repeat: no-repeat;
     height: 100%;
-    
     background: url(/img/tłopod.png) ;
     background-size: cover;
     background-color: rgba(252, 250, 244, 0.911);
@@ -225,7 +199,12 @@ ul .LiTopL:hover{
 
 .section{
     text-align: center;
-    position: relative;
+    position: absolute;
+    display: block;
+    width: 50%;
+    margin: 40px auto;
+    left: 27%;
+    justify-content: center;
 }
 
 .section-light{
@@ -236,6 +215,9 @@ ul .LiTopL:hover{
 .section-dark{
     background-color: #f4f4f4;
     color: #666;
+    font-size: 1.5em;
+    opacity: 200px;
+
 }
 .parallax-sectionOne{
     padding: 150px 0 0;
