@@ -1,32 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .grid {
     display: flex;
     flex-direction: column;
-    width: 1000px;
-    margin: 0 auto;
+    width: 1120px;
+    margin: 0;
     flex-wrap: wrap;
   }
 
   .gridRow {
     display: flex;
-    justify-content: space-around;
+    
   }
 
   .gridCell {
     height: 40px;
-    flex-grow: 1;
+    width: 40px;
     background: gray;
     box-sizing: border-box;
-    border: 2px solid white;
+    border: 1px solid white;
+    margin: 0;
   }
 
-  .wall {
-    background: black;
-  }
-
-  .fruit {
-    background: red;
-  }
-
-  .pacman {
-    background: yellow;
-  }
