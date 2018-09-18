@@ -1,0 +1,32 @@
+.grid {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .gridRow {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .gridCell {
+    height: 40px;
+    flex-grow: 1;
+    background: gray;
+    box-sizing: border-box;
+    border: 2px solid white;
+  }
+
+  .wall {
+    background: black;
+  }
+
+  .fruit {
+    background: red;
+  }
+
+  .pacman {
+    background: yellow;
+  }
