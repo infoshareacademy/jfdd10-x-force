@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    width: 1120px;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .gridRow {
+    display: flex;
+    
+  }
+
+  .gridCell {
+    height: 40px;
+    width: 40px;
+    background: gray;
+    box-sizing: border-box;
+    border: 1px solid white;
+    margin: 0;
+  }
+
