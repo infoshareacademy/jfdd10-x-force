@@ -40,7 +40,8 @@ for (var j = 0; j < boardData.length; j += 1) {
   for (var i = 0; i < size; i += 1) {
     var cell = document.createElement('div');
     cell.classList.add('gridCell');
-    
+    cell.setAttribute('data-x', i)
+    cell.setAttribute('data-y', j)
     row.appendChild(cell);
   }
 }
