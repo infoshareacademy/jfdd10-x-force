@@ -21,11 +21,15 @@
     width: 40px;
     background: gray;
     box-sizing: border-box;
-    border: 1px solid white;
+    
     margin: 0;
   }
 
   .player {
     background: cyan;
+  }
+
+  .wall {
+    background: rgb(23, 29, 29);
   }
 
