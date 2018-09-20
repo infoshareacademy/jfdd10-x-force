@@ -150,6 +150,8 @@ function movePlayer() {
     target.classList.contains('badge')
   ) {
     target.classList.remove('badge');
-    badges = badges.filter(function (badge) { return badge !== target })
+    scorePoint();
+    badges = badges.filter(function (badge) { return badge !== target });
+    
   }
 }
