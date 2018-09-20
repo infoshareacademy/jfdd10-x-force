@@ -8,14 +8,8 @@ function collisionAddpoint(range, player, target) {
 
     setInterval(function () {
 
-        range.map(function(arr){
-            return arr.find(player, target){
-                return player === target ? true : false;
-            }
-
-        })
-
-        if ( (target != null && target.classList.contains('badge') && player)
+       
+        if ( (target != null && target.classList.contains('badge'))
         ) {
             target.remove.classList('badge')
             scorePoint();
