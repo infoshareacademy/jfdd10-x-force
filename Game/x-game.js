@@ -106,11 +106,34 @@ var directions = {
   }
 
 }
+var player = document.querySelector('.player');
+var badges = [];
+var beginAt = Date.now()
+var lastMoveTime = beginAt;
+var lastBadgeTime = beginAt;
+var badgeDTime = 500;
+update();
 
-setInterval(function () {
-  var player = document.querySelector('.player');
-  var badge = document.querySelector('.badge');
-  var app = document.querySelector('#app');
+function update() {
+  var now = Date.now();
+  if (now - lastMoveTime > 100) {
+    movePlayer();
+    lastMoveTime = now;
+  }
+  if (now - lastBadgeTime > badgeDTime) {
+    if (badges.length < 5) {
+      badges.push(generateBadge());
+      lastBadgeTime = now;
+    }
+    
+  }
+  
+  
+  requestAnimationFrame(update);
+}
+
+function movePlayer() {
+  
   var target = (directions[direction] || function () {
     return null
   })(player)
@@ -120,17 +143,13 @@ setInterval(function () {
   ) {
     player.classList.remove('player');
     target.classList.add('player');
+    player = target;
   }
 
-  if (target.classList.contains('badge')) {
+  if (target != null &&
+    target.classList.contains('badge')
+  ) {
     target.classList.remove('badge');
-    scorePoint();
+    badges = badges.filter(function (badge) { return badge !== target })
   }
-
-  if (!app.contains('badge')) {
-    badge.createElement('badge');
-  }
-
-
-}, 100)
-
+}
