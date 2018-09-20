@@ -24,7 +24,11 @@
     
     margin: 0;
   }
+  .badge{
 
+    background-color: yellow;
+
+  }
   .player {
     background: cyan;
   }
@@ -33,3 +37,4 @@
     background: rgb(23, 29, 29);
   }
 
+  

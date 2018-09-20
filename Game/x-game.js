@@ -120,6 +120,14 @@ setInterval (function(){
       target.classList.add('player');
     }
 
-
+    if (
+      target.classList.contains('badge')
+      )
+       {
+        target.classList.remove('badge');
+       
+      }
+  
+    
 
 }, 100) 
