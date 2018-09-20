@@ -19,8 +19,8 @@ var boardData = [
   '______________########______',
   '______#_____________________',
   '______#_____________________',
- 
- 
+
+
 ]
 
 var grid = document.createElement('div');
@@ -54,7 +54,7 @@ for (var j = 0; j < boardData.length; j += 1) {
 
 var direction = ''
 
-window.addEventListener('keydown', function(event){
+window.addEventListener('keydown', function (event) {
   var key = event.code
 
   if (key === 'ArrowUp') {
@@ -69,9 +69,9 @@ window.addEventListener('keydown', function(event){
   if (key === 'ArrowLeft') {
     direction = 'left';
   }
-  
+
 })
-window.addEventListener('keyup', function(event){
+window.addEventListener('keyup', function (event) {
   var key = event.code
 
   if (key === 'ArrowUp') {
@@ -86,11 +86,11 @@ window.addEventListener('keyup', function(event){
   if (key === 'ArrowLeft') {
     direction = '';
   }
-  
+
 })
 
 var directions = {
-  left : function (player) {
+  left: function (player) {
     return player.previousElementSibling;
   },
   right: function (player) {
@@ -106,28 +106,50 @@ var directions = {
   }
 
 }
+var player = document.querySelector('.player');
+var badges = [];
+var beginAt = Date.now()
+var lastMoveTime = beginAt;
+var lastBadgeTime = beginAt;
+var badgeDTime = 500;
+update();
 
-setInterval (function(){
-  var player = document.querySelector('.player');
-  var target = (directions[direction] || function () {
-    return null 
-  }) (player)
-
-  if (target != null && 
-    !target.classList.contains('wall')
-    ) {
-      player.classList.remove('player');
-      target.classList.add('player');
+function update() {
+  var now = Date.now();
+  if (now - lastMoveTime > 100) {
+    movePlayer();
+    lastMoveTime = now;
+  }
+  if (now - lastBadgeTime > badgeDTime) {
+    if (badges.length < 5) {
+      badges.push(generateBadge());
+      lastBadgeTime = now;
     }
-
-    if (
-      target.classList.contains('badge')
-      )
-       {
-        target.classList.remove('badge');
-       
-      }
-  
     
+  }
+  
+  
+  requestAnimationFrame(update);
+}
 
-}, 100) 
+function movePlayer() {
+  
+  var target = (directions[direction] || function () {
+    return null
+  })(player)
+
+  if (target != null &&
+    !target.classList.contains('wall')
+  ) {
+    player.classList.remove('player');
+    target.classList.add('player');
+    player = target;
+  }
+
+  if (target != null &&
+    target.classList.contains('badge')
+  ) {
+    target.classList.remove('badge');
+    badges = badges.filter(function (badge) { return badge !== target })
+  }
+}
