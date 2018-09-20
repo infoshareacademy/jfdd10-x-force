@@ -19,8 +19,8 @@ var boardData = [
   '______________########______',
   '______#_____________________',
   '______#_____________________',
- 
- 
+
+
 ]
 
 var grid = document.createElement('div');
@@ -54,7 +54,7 @@ for (var j = 0; j < boardData.length; j += 1) {
 
 var direction = ''
 
-window.addEventListener('keydown', function(event){
+window.addEventListener('keydown', function (event) {
   var key = event.code
 
   if (key === 'ArrowUp') {
@@ -69,9 +69,9 @@ window.addEventListener('keydown', function(event){
   if (key === 'ArrowLeft') {
     direction = 'left';
   }
-  
+
 })
-window.addEventListener('keyup', function(event){
+window.addEventListener('keyup', function (event) {
   var key = event.code
 
   if (key === 'ArrowUp') {
@@ -86,11 +86,11 @@ window.addEventListener('keyup', function(event){
   if (key === 'ArrowLeft') {
     direction = '';
   }
-  
+
 })
 
 var directions = {
-  left : function (player) {
+  left: function (player) {
     return player.previousElementSibling;
   },
   right: function (player) {
@@ -107,27 +107,30 @@ var directions = {
 
 }
 
-setInterval (function(){
+setInterval(function () {
   var player = document.querySelector('.player');
+  var badge = document.querySelector('.badge');
+  var app = document.querySelector('#app');
   var target = (directions[direction] || function () {
-    return null 
-  }) (player)
+    return null
+  })(player)
 
-  if (target != null && 
+  if (target != null &&
     !target.classList.contains('wall')
-    ) {
-      player.classList.remove('player');
-      target.classList.add('player');
-    }
+  ) {
+    player.classList.remove('player');
+    target.classList.add('player');
+  }
 
-    if (
-      target.classList.contains('badge')
-      )
-       {
-        target.classList.remove('badge');
-       
-      }
-  
-    
+  if (target.classList.contains('badge')) {
+    target.classList.remove('badge');
+    scorePoint();
+  }
 
-}, 100) 
+  if (!app.contains('badge')) {
+    badge.createElement('badge');
+  }
+
+
+}, 100)
+
