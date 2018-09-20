@@ -21,11 +21,20 @@
     width: 40px;
     background: gray;
     box-sizing: border-box;
-    border: 1px solid white;
+    
     margin: 0;
   }
+  .badge{
 
+    background-color: yellow;
+
+  }
   .player {
     background: cyan;
   }
 
+  .wall {
+    background: rgb(23, 29, 29);
+  }
+
+  
