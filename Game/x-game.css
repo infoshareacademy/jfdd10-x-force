@@ -17,8 +17,8 @@
   }
 
   .gridCell {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     background: gray;
     box-sizing: border-box;
     
@@ -30,11 +30,20 @@
 
   }
   .player {
-    background: cyan;
+    
+    background :url(/img/gosciunowy.png) center no-repeat;
+    background-size: 100% 100%;
+    
   }
 
   .wall {
     background: rgb(23, 29, 29);
+    box-sizing: border-box;
+    background: url(/Game/imgGame/wall.jpg) center no-repeat;
+    background-size: 100% 100%;
+    
   }
-
+#app{
+  background: gray
+}
   
