@@ -98,11 +98,18 @@ var directions = {
   },
   up: function (player) {
     var colIndex = Array.from(player.parentElement.children).indexOf(player);
-    return player.parentElement.previousElementSibling.children[colIndex];
+
+    // if(player.parentElement.previousElementSibling !== null){
+    //   return player.parentElement.previousElementSibling.children[colIndex];
+    // } 
+    // return null
+   return player.parentElement.previousElementSibling && player.parentElement.previousElementSibling.children[colIndex]
+
   },
   down: function (player) {
     var colIndex = Array.from(player.parentElement.children).indexOf(player);
-    return player.parentElement.nextElementSibling.children[colIndex];
+    // return player.parentElement.nextElementSibling.children[colIndex];
+    return player.parentElement.nextElementSibling && player.parentElement.nextElementSibling.children[colIndex]
   }
 
 }
