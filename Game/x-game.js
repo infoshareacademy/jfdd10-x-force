@@ -2,19 +2,19 @@ var appContainer = document.querySelector('#app');
 
 var boardData = [
   '_________________###########',
-  '_________________#_________#',
+  '_______e_________#_________#',
   '_p_______________#_________#',
   '_________________###########',
   '____________________________',
   '________#######_____________',
-  '________#_____#_____________',
+  '________#_____#______e______',
   '________#_____#_____________',
   '________###_###_____________',
   '____________________________',
   '____________________________',
   '#######_______########______',
   '______#______________#______',
-  '______#_______#______#______',
+  '______#___e___#______#______',
   '______#_______#______#______',
   '______________########______',
   '______#_____________________',
@@ -47,6 +47,9 @@ for (var j = 0; j < boardData.length; j += 1) {
     }
     if (rowData[i] === '#') {
       cell.classList.add('wall');
+    }
+    if (rowData[i] === 'e') {
+      cell.classList.add('enemy')
     }
     row.appendChild(cell);
   }
@@ -107,6 +110,7 @@ var directions = {
 
 }
 var player = document.querySelector('.player');
+var enemies = document.querySelectorAll('.enemy');
 var badges = [];
 var beginAt = Date.now()
 var lastMoveTime = beginAt;
@@ -114,20 +118,41 @@ var lastBadgeTime = beginAt;
 var badgeDTime = 500;
 update();
 
+function destroyBadge(badge){
+  badge.domNode.classList.remove('badge')
+}
+
 function update() {
   var now = Date.now();
   if (now - lastMoveTime > 100) {
     movePlayer();
     lastMoveTime = now;
   }
+
+  badges.filter(function (badge) {
+    return badge.generatedAt + badge.lifetime < now
+  }).forEach(destroyBadge)
+
+  badges = badges.filter(function (badge) {
+    return badge.generatedAt + badge.lifetime >= now
+  })
+
   if (now - lastBadgeTime > badgeDTime) {
     if (badges.length < 5) {
-      badges.push(generateBadge());
+      badges.push({
+        domNode: generateBadge(),
+        generatedAt: now,
+        lifetime: 3000 + (Math.random() * 5000)
+      });
       lastBadgeTime = now;
     }
     
   }
-  
+  if ( score === winScore ) {
+    badges.forEach(destroyBadge)
+    badges = []
+    return
+  }
   
   requestAnimationFrame(update);
 }
@@ -155,3 +180,4 @@ function movePlayer() {
     
   }
 }
+
