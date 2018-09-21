@@ -36,5 +36,7 @@
   .wall {
     background: rgb(23, 29, 29);
   }
-
+  .exit{
+    background: rgb(78, 78, 80);
+  }
   

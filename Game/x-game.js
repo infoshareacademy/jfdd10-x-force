@@ -1,56 +1,87 @@
 var appContainer = document.querySelector('#app');
 
 var boardData = [
-  '_________________###########',
   '_________________#_________#',
-  '_p_______________#_________#',
-  '_________________###########',
+  '_________________#_________#',
+  '_p____##_###_____#_________#',
+  '______#____#_____#_________#',
+  '______#____#_____#####_#####',
+  '___####____#_______________e',
+  '___#_______________________e',
+  '___#_______#_______#########',
+  '___#########_______#________',
   '____________________________',
-  '________#######_____________',
-  '________#_____#_____________',
-  '________#_____#_____________',
-  '________###_###_____________',
-  '____________________________',
-  '____________________________',
-  '#######_______########______',
-  '______#______________#______',
-  '______#_______#______#______',
-  '______#_______#______#______',
-  '______________########______',
-  '______#_____________________',
-  '______#_____________________',
+  '___________________#________',
+  '#######__####_####_#________',
+  '______#__#_______#_#________',
+  '______#__#_______#_#________',
+  '______#__#_______#_#________',
+  '_________#_______#_#________',
+  '______#__#_______#_#________',
+  '______#__#_______#_#________',
 
 
 ]
 
-var grid = document.createElement('div');
-grid.classList.add('grid');
+var boardData1 = [
+  '______#__________#_________#',
+  '______#__________#_________#',
+  '______#__________#_________#',
+  '______#__________#_________#',
+  '#######__________###########',
+  'ep__________________________',
+  'e___________________________',
+  '#######____________#########',
+  '______#____________#________',
+  '____________________________',
+  '______#____________#________',
+  '______#____________#________',
+  '______#____________#________',
+  '______#____________#________',
+  '______#____________#________',
+  '___________________#________',
+  '______#____________#________',
+  '______#____________#________',
 
-appContainer.appendChild(grid);
 
-for (var j = 0; j < boardData.length; j += 1) {
-  var row = document.createElement('div');
-  row.classList.add('gridRow');
+]
+function generateBoard(map) {
+  var grid = document.createElement('div');
+  grid.classList.add('grid');
 
-  grid.appendChild(row);
+  appContainer.innerHTML = ''
+  appContainer.appendChild(grid);
+  
 
-  var rowData = boardData[j];
-  var size = rowData.length;
+  for (var j = 0; j < map.length; j += 1) {
+    var row = document.createElement('div');
+    row.classList.add('gridRow');
 
-  for (var i = 0; i < size; i += 1) {
-    var cell = document.createElement('div');
-    cell.classList.add('gridCell');
-    cell.setAttribute('data-x', i)
-    cell.setAttribute('data-y', j)
-    if (rowData[i] === 'p') {
-      cell.classList.add('player');
+    grid.appendChild(row);
+
+    var rowData = map[j];
+    var size = rowData.length;
+
+    for (var i = 0; i < size; i += 1) {
+      var cell = document.createElement('div');
+      cell.classList.add('gridCell');
+      cell.setAttribute('data-x', i)
+      cell.setAttribute('data-y', j)
+      if (rowData[i] === 'p') {
+        cell.classList.add('player');
+      }
+      if (rowData[i] === '#') {
+        cell.classList.add('wall');
+      }
+      if (rowData[i] === 'e') {
+        cell.classList.add('exit');
+      }
+      row.appendChild(cell);
     }
-    if (rowData[i] === '#') {
-      cell.classList.add('wall');
-    }
-    row.appendChild(cell);
   }
+player = document.querySelector('.player');
 }
+generateBoard(boardData)
 
 var direction = ''
 
@@ -103,7 +134,7 @@ var directions = {
     //   return player.parentElement.previousElementSibling.children[colIndex];
     // } 
     // return null
-   return player.parentElement.previousElementSibling && player.parentElement.previousElementSibling.children[colIndex]
+    return player.parentElement.previousElementSibling && player.parentElement.previousElementSibling.children[colIndex]
 
   },
   down: function (player) {
@@ -132,15 +163,15 @@ function update() {
       badges.push(generateBadge());
       lastBadgeTime = now;
     }
-    
+
   }
-  
-  
+
+
   requestAnimationFrame(update);
 }
 
 function movePlayer() {
-  
+
   var target = (directions[direction] || function () {
     return null
   })(player)
@@ -159,6 +190,11 @@ function movePlayer() {
     target.classList.remove('badge');
     scorePoint();
     badges = badges.filter(function (badge) { return badge !== target });
-    
+
+  }
+  if (target != null &&
+    target.classList.contains('exit')
+  ) {
+    generateBoard(boardData1)
   }
 }
