@@ -1,7 +1,13 @@
 
 
 function menuStart() {
-  window.addEventListener('click', function () {
+  var start = document.querySelector('.button-start');
+
+  start.addEventListener('click', function () {
+    var gridNode = document.querySelector('.grid');
+    gridNode.remove();
+    createBoard();
+
     var direction = ''
 
     window.addEventListener('keydown', function (event) {
@@ -107,4 +113,6 @@ function menuStart() {
     }
   })
 }
+
 menuStart();
+
