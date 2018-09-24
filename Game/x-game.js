@@ -1,3 +1,13 @@
+var randomDirection = {
+  1: 'arrowDown',
+  2: 'arrowUp',
+  3: 'arrowLeft',
+  4: 'arrowRight'
+}
+
+const randomKeyDirection = Math.ceil(Math.random() * 4);
+randomDirection[randomKeyDirection];
+
 var appContainer = document.querySelector('#app');
 
 var boardData = [
@@ -180,4 +190,31 @@ function movePlayer() {
     
   }
 }
+
+
+function moveEnemy() {
+  
+  var target = (directions[direction] || function () {
+    return null
+  })(player)
+
+  if (target != null &&
+    !target.classList.contains('wall')
+  ) {
+    player.classList.remove('player');
+    target.classList.add('player');
+    player = target;
+  }
+
+  if (target != null &&
+    target.classList.contains('badge')
+  ) {
+    target.classList.remove('badge');
+    scorePoint();
+    badges = badges.filter(function (badge) { return badge !== target });
+    
+  }
+}
+
+
 

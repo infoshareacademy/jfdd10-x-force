@@ -24,10 +24,14 @@
     
     margin: 0;
   }
+   .enemy {
+          background:  red;
+        }
+
   .badge{
-
+    
     background-color: yellow;
-
+    
   }
   .player {
     background: cyan;
@@ -35,8 +39,4 @@
 
   .wall {
     background: rgb(23, 29, 29);
-  }
-
-  .enemy {
-    background:  red;
   }
