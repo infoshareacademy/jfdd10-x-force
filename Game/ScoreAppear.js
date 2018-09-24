@@ -8,5 +8,6 @@ function generateBadge(){
     var randomCell = freeCells[randomIndex];
 
     randomCell.classList.add('badge');
+    
     return randomCell;
 }

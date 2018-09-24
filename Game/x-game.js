@@ -78,8 +78,24 @@ function generateBoard(map) {
       }
       row.appendChild(cell);
     }
+    
   }
 player = document.querySelector('.player');
+}
+function generateBadge(){
+    for(var i=0; i<5; i++){
+  var freeCells = document.querySelectorAll('.gridCell:not(.wall):not(.player):not(.badge)')
+  howManyFreeCells = freeCells.length
+  
+  var randomNumber = Math.random();
+  var randomIndex = Math.floor(randomNumber * howManyFreeCells);
+  var randomCell = freeCells[randomIndex];
+  
+  
+  randomCell.classList.add('badge');
+  
+  return randomCell;
+    }
 }
 generateBoard(boardData)
 
@@ -144,31 +160,31 @@ var directions = {
   }
 
 }
-var player = document.querySelector('.player');
-var badges = [];
-var beginAt = Date.now()
-var lastMoveTime = beginAt;
-var lastBadgeTime = beginAt;
-var badgeDTime = 500;
-update();
+//
+// var badges = [];
+// var beginAt = Date.now()
+// var lastMoveTime = beginAt;
+// var lastBadgeTime = beginAt;
+// var badgeDTime = 500;
+// update();
 
-function update() {
-  var now = Date.now();
-  if (now - lastMoveTime > 100) {
-    movePlayer();
-    lastMoveTime = now;
-  }
-  if (now - lastBadgeTime > badgeDTime) {
-    if (badges.length < 5) {
-      badges.push(generateBadge());
-      lastBadgeTime = now;
-    }
+// function update() {
+//   var now = Date.now();
+//   if (now - lastMoveTime > 100) {
+//     movePlayer();
+//     lastMoveTime = now;
+//   }
+//   if (now - lastBadgeTime > badgeDTime) {
+//     if (badges.length < 5) {
+//       badges.push(generateBadge());
+//       lastBadgeTime = now;
+//     }
 
-  }
+//   }
 
 
-  requestAnimationFrame(update);
-}
+//   requestAnimationFrame(update);
+// }
 
 function movePlayer() {
 
@@ -189,12 +205,29 @@ function movePlayer() {
   ) {
     target.classList.remove('badge');
     scorePoint();
-    badges = badges.filter(function (badge) { return badge !== target });
+    
 
   }
   if (target != null &&
     target.classList.contains('exit')
   ) {
     generateBoard(boardData1)
+   
   }
 }
+
+
+setInterval(function(){
+
+ 
+ 
+ 
+  movePlayer()
+  
+
+
+
+
+
+
+},100)
