@@ -19,19 +19,21 @@
   .gridCell {
     height: 50px;
     width: 50px;
-    background: gray;
     box-sizing: border-box;
-    
-    margin: 0;
+    background: url(/Game/imgGame/ulrick-wery-tileableset-brickwallmoss.jpg) ;
+    background-size: 600% 600%;
   }
   .badge{
 
-    background-color: yellow;
+    
+    background: url(/Game/imgGame/coin.jpg) center;
+    background-size: 100% 100%;
+    
 
   }
   .player {
     
-    background :url(/img/gosciunowy.png) center no-repeat;
+    background :url(/Game/imgGame/plaer.jpg) center no-repeat;
     background-size: 100% 100%;
     
   }
@@ -41,9 +43,11 @@
     box-sizing: border-box;
     background: url(/Game/imgGame/wall.jpg) center no-repeat;
     background-size: 100% 100%;
+    background-color: unset;
     
   }
 #app{
-  background: gray
+  background: url(/Game/imgGame/ulrick-wery-tileableset-brickwallmoss.jpg) center;
+  background-size: 100% 100%;
 }
   
