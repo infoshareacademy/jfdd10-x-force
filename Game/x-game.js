@@ -139,13 +139,7 @@ function play() {
       lastMoveTime = now;
     }
 
-    badges.filter(function (badge) {
-      return badge.generatedAt + badge.lifetime < now
-    }).forEach(destroyBadge)
-
-    badges = badges.filter(function (badge) {
-      return badge.generatedAt + badge.lifetime >= now
-    })
+ 
 
     if (now - lastBadgeTime > badgeDTime) {
       if (badges.length < 5) {
