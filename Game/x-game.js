@@ -1,37 +1,29 @@
-var randomDirection = {
-  1: 'arrowDown',
-  2: 'arrowUp',
-  3: 'arrowLeft',
-  4: 'arrowRight'
-}
 
-const randomKeyDirection = Math.ceil(Math.random() * 4);
-randomDirection[randomKeyDirection];
 
 var appContainer = document.querySelector('#app');
 
 var boardData = [
-  '_________________###########',
-  '_______e_________#_________#',
-  '_p_______________#_________#',
-  '_________________###########',
+  '_________________#_________#',
+  '_________________#_________#',
+  '_p____##_###_____#_________#',
+  '______#____#_____#_________#',
+  '______#____#_____#####_#####',
+  '___####____#________________',
+  '___#____e___________________',
+  '___#_______#_______#########',
+  '___#########_______#________',
   '____________________________',
-  '________#######_____________',
-  '________#_____#______e______',
-  '________#_____#_____________',
-  '________###_###_____________',
-  '____________________________',
-  '____________________________',
-  '#######_______########______',
-  '______#______________#______',
-  '______#___e___#______#______',
-  '______#_______#______#______',
-  '______________########______',
-  '______#_____________________',
-  '______#_____________________',
-
-
-]
+  '_____________e_____#________',
+  '#######__####_####_#________',
+  '______#__#_______#_#________',
+  '______#__#_______#_#________',
+  '______#__#_______#_#________',
+  '___e_____#_______#_#________',
+  '______#__#_______#_#________',
+  '______#__#_______#_#________',
+ 
+ 
+ ]
 
 var grid = document.createElement('div');
 grid.classList.add('grid');
@@ -111,20 +103,23 @@ var directions = {
   },
   up: function (player) {
     var colIndex = Array.from(player.parentElement.children).indexOf(player);
-    return player.parentElement.previousElementSibling.children[colIndex];
+    return player.parentElement.previousElementSibling && player.parentElement.previousElementSibling.children[colIndex]
   },
   down: function (player) {
     var colIndex = Array.from(player.parentElement.children).indexOf(player);
-    return player.parentElement.nextElementSibling.children[colIndex];
+    return player.parentElement.nextElementSibling && player.parentElement.nextElementSibling.children[colIndex]
   }
 
 }
+
+
 var player = document.querySelector('.player');
 var enemies = document.querySelectorAll('.enemy');
 var badges = [];
 var beginAt = Date.now()
 var lastMoveTime = beginAt;
 var lastBadgeTime = beginAt;
+var lastEnemyTime = beginAt;
 var badgeDTime = 500;
 update();
 
@@ -163,48 +158,52 @@ function update() {
     badges = []
     return
   }
+
+  if (now - lastEnemyTime > 100) {
+  document.querySelectorAll('.enemy').forEach(function (enemy) {
+    moveCharacter(enemy, 'enemy', true)
+    lastEnemyTime = now;
+
+  })
+}
   
   requestAnimationFrame(update);
 }
 
 function movePlayer() {
-  
-  var target = (directions[direction] || function () {
-    return null
-  })(player)
-
-  if (target != null &&
-    !target.classList.contains('wall')
-  ) {
-    player.classList.remove('player');
-    target.classList.add('player');
-    player = target;
-  }
-
-  if (target != null &&
-    target.classList.contains('badge')
-  ) {
-    target.classList.remove('badge');
-    scorePoint();
-    badges = badges.filter(function (badge) { return badge !== target });
-    
-  }
+  player = moveCharacter(player, 'player')
 }
 
 
-function moveEnemy() {
-  
-  var target = (directions[direction] || function () {
-    return null
-  })(player)
+function moveCharacter(player, className, shouldBeRandom) {
+  var target;
+
+  if (shouldBeRandom) {
+    var randomDirections = {
+      1: 'down',
+      2: 'up',
+      3: 'left',
+      4: 'right'
+    }
+    
+    const randomKeyDirection = Math.ceil(Math.random() * 4);
+    target = directions[randomDirections[randomKeyDirection]](player);
+  } else {
+    target = (directions[direction] || function () {
+      return null
+    })(player)
+  }
 
   if (target != null &&
-    !target.classList.contains('wall')
-  ) {
-    player.classList.remove('player');
-    target.classList.add('player');
+    !target.classList.contains('wall') && !target.classList.contains('enemy'))
+   {
+    player.classList.remove(className);
+    target.classList.add(className);
     player = target;
   }
+
+
+  if (player.classList.contains('player')) {
 
   if (target != null &&
     target.classList.contains('badge')
@@ -214,6 +213,9 @@ function moveEnemy() {
     badges = badges.filter(function (badge) { return badge !== target });
     
   }
+
+  }
+  return player;
 }
 
 
