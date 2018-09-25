@@ -7,7 +7,7 @@
   display: flex;
   position: relative;
   flex: 1 1 0;
-  background: url(/Game/imgGame/ulrick-wery-tileableset-brickwallmoss.jpg) center;
+  
   background-size: 100% 100%;
 }
 .grid {

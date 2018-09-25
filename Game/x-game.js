@@ -55,6 +55,8 @@ function play() {
 function createBoard(map){
   var grid = document.createElement('div');
   grid.classList.add('grid');
+  
+  appContainer.innerHTML = ''
 
   appContainer.appendChild(grid);
 
@@ -87,7 +89,7 @@ function createBoard(map){
       row.appendChild(cell);
     }
   }
-
+  player = document.querySelector('.player');
 }
 createBoard(boardData)
   
