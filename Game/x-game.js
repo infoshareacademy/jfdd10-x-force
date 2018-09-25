@@ -150,7 +150,7 @@ createBoard(boardData)
   }
 
 
-  var player = document.querySelector('.player');
+  var player 
   var enemies = document.querySelectorAll('.enemy');
   var badges = [];
   var beginAt = Date.now()
