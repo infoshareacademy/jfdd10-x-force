@@ -62,6 +62,10 @@ function play() {
     }
   }
 
+  document.querySelector('.healthbar').classList.add('health')
+
+
+
   var direction = ''
 
   window.addEventListener('keydown', function (event) {
@@ -117,7 +121,7 @@ function play() {
 
   }
 
-
+  var heart= document.querySelectorAll('.heart');
   var player = document.querySelector('.player');
   var enemies = document.querySelectorAll('.enemy');
   var badges = [];
@@ -215,6 +219,20 @@ function play() {
         scorePoint();
         badges = badges.filter(function (badge) { return badge !== target });
 
+      }
+
+
+      if (className === 'player') {
+
+        if (target !== null &&
+          target.classList.contains('enemy')
+        ) {
+          var heart= document.querySelectorAll('.heart:last-child').forEach(function (element) {
+            element.classList.remove('heart');
+          });
+         
+  
+        }
       }
 
     }
