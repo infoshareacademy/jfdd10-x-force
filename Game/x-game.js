@@ -13,8 +13,8 @@ function play() {
     '_p____##_###_____#_________#',
     '______#____#_____#_________#',
     '______#____#_____#####_#####',
-    '___####____#________________',
-    '___#____e___________________',
+    '___####____#_______________n',
+    '___#____e__________________n',
     '___#_______#_______#########',
     '___#########_______#________',
     '____________________________',
@@ -30,18 +30,41 @@ function play() {
 
   ]
 
+  var boardData1 = [
+    '_________________#_________#',
+    '_________________#_________#',
+    '_p_______________#_________#',
+    '______#____#_____#_________#',
+    '______#____#________________',
+    '___________#________________',
+    '___#____e___________________',
+    '___#_______#________________',
+    '___________________#________',
+    '____________________________',
+    '_____________e_____#________',
+    '___________________#________',
+    '______#__#_______#_#________',
+    '______#__#_______#_#________',
+    '______#__#_______#_#________',
+    '___e_____#_______#_#________',
+    '______#__#_______#_#________',
+    '______#__#_______#_#________',
+
+
+  ]
+function createBoard(map){
   var grid = document.createElement('div');
   grid.classList.add('grid');
 
   appContainer.appendChild(grid);
 
-  for (var j = 0; j < boardData.length; j += 1) {
+  for (var j = 0; j < map.length; j += 1) {
     var row = document.createElement('div');
     row.classList.add('gridRow');
 
     grid.appendChild(row);
 
-    var rowData = boardData[j];
+    var rowData = map[j];
     var size = rowData.length;
 
     for (var i = 0; i < size; i += 1) {
@@ -58,9 +81,16 @@ function play() {
       if (rowData[i] === 'e') {
         cell.classList.add('enemy')
       }
+      if (rowData[i] === 'n') {
+        cell.classList.add('next')
+      }
       row.appendChild(cell);
     }
   }
+
+}
+createBoard(boardData)
+  
 
   var direction = ''
 
@@ -210,6 +240,13 @@ function play() {
         badges = badges.filter(function (badge) { return badge !== target });
 
       }
+      if (target != null &&
+        target.classList.contains('next')
+      ) {
+        createBoard(boardData1)
+
+      }
+
 
     }
     return player;
