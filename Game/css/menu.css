@@ -1,0 +1,57 @@
+
+.menu{
+    color: #ffffff;
+    background: #2C3E50;
+    position: relative;
+    width: 400px;
+    min-width: 230px;
+    flex: 1 1 0;
+}
+
+.title{
+    margin: 30px auto;
+    text-align: center;
+    text-shadow: #3333ff 0 0 20px;
+    position: relative;
+}
+
+.button{
+    list-style: none;
+    box-sizing: border-box;
+    flex: 1 1 0;
+    width: 100%;
+    line-height: 48px;
+    text-align: center;
+    position: absolute;
+    border: 15px solid rgb(196, 38, 38);
+    background-color: #3333ff;
+    font-size: 24px;
+    text-shadow: #333333 2px 2px 2px;
+    cursor: pointer;
+
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 2px solid;
+    outline-color: rgba(255, 255, 255, -6);
+    
+}
+
+.button:hover{
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, -5), 0 0 20px rgba(255, 255, 255, 1);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 25px;
+    text-shadow: #427388;
+
+}
+
+.button-start{
+    top: 150px;
+}
+.button-scores{
+    top: 250px;
+}
+.button-autors{
+    top: 350px;
+}
+.button-exit{
+    top: 450px;
+}

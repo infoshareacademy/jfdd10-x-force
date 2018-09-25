@@ -2,13 +2,21 @@
   margin: 0;
   padding: 0;
 }
-
+#app{
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex: 1 1 0;
+  background: url(/Game/imgGame/ulrick-wery-tileableset-brickwallmoss.jpg) center;
+  background-size: 100% 100%;
+}
 .grid {
     display: flex;
+    position: relative;
     flex-direction: column;
-    width: 1120px;
     margin: 0;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .gridRow {
@@ -21,20 +29,25 @@
     width: 40px;
     background: gray;
     box-sizing: border-box;
-    
+    background: url(/Game/imgGame/ulrick-wery-tileableset-brickwallmoss.jpg) ;
+    background-size: 600% 600%;
     margin: 0;
   }
   .badge{
-
-    background-color: yellow;
-
+    background: url(/Game/imgGame/coin.jpg) center;
+    background-size: 100% 100%;
   }
   .player {
-    background: cyan;
+    background :url(/Game/imgGame/plaer.jpg) center no-repeat;
+    background-size: 100% 100%;
   }
 
   .wall {
     background: rgb(23, 29, 29);
+    box-sizing: border-box;
+    background: url(/Game/imgGame/wall.jpg) center no-repeat;
+    background-size: 100% 100%;
+    background-color: unset;
   }
 
   
