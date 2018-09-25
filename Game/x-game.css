@@ -7,8 +7,9 @@
   display: flex;
   position: relative;
   flex: 1 1 0;
-  background: url(/Game/imgGame/ulrick-wery-tileableset-brickwallmoss.jpg) center;
-  background-size: 100% 100%;
+  background: url(/Game/imgGame/grass.jpeg) center ;
+  background-size: 40px 40px
+ 
 }
 .grid {
     display: flex;
@@ -28,30 +29,36 @@
     height: 40px;
     width: 40px;
     background: gray;
-    box-sizing: border-box;
-    background: url(/Game/imgGame/ulrick-wery-tileableset-brickwallmoss.jpg) ;
-    background-size: 600% 600%;
+    background: url(/Game/imgGame/grass.jpeg) no-repeat center ;
+    background-size: 100% 100%;
     margin: 0;
   }
   .badge{
     background: url(/Game/imgGame/coin.jpg) center;
     background-size: 100% 100%;
+    border-radius: 50%;
   }
 
 
   .player {
-    background :url(/Game/imgGame/plaer.jpg) center no-repeat;
+    background :url(/Game/imgGame/plaer1.png) center no-repeat;
     background-size: 100% 100%;
   }
 
   .enemy {
-    background: red;
+    background: url(/Game/imgGame/monster.png);
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    border-radius: 50%;
   }
 
   .wall {
     background: rgb(23, 29, 29);
     box-sizing: border-box;
+    box-shadow: 0 8px 6px -6px black;
     background: url(/Game/imgGame/wall.jpg) center no-repeat;
     background-size: 100% 100%;
-    background-color: unset;
+    
+
+    
   }
