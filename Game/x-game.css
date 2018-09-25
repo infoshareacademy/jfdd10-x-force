@@ -37,9 +37,15 @@
     background: url(/Game/imgGame/coin.jpg) center;
     background-size: 100% 100%;
   }
+
+
   .player {
     background :url(/Game/imgGame/plaer.jpg) center no-repeat;
     background-size: 100% 100%;
+  }
+
+  .enemy {
+    background: red;
   }
 
   .wall {
@@ -49,5 +55,3 @@
     background-size: 100% 100%;
     background-color: unset;
   }
-
-  
