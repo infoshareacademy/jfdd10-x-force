@@ -9,4 +9,5 @@ function generateBadge(){
 
     randomCell.classList.add('badge');
     return randomCell;
+    
 }

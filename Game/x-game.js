@@ -3,7 +3,9 @@ function play() {
   if (gridNode) {
     gridNode.remove();
 
+
   }
+  
 
   var appContainer = document.querySelector('#app');
 
@@ -87,9 +89,12 @@ function createBoard(map){
         cell.classList.add('next')
       }
       row.appendChild(cell);
+      
     }
   }
-  player = document.querySelector('.player');
+  for(var i = 0; i<5; i++){
+  generateBadge()
+  }
 }
 createBoard(boardData)
   
@@ -173,16 +178,7 @@ createBoard(boardData)
 
  
 
-    if (now - lastBadgeTime > badgeDTime) {
-      if (badges.length < 5) {
-        badges.push({
-          domNode: generateBadge(),
-          generatedAt: now,
-          lifetime: 3000 + (Math.random() * 5000)
-        });
-        lastBadgeTime = now;
-      }
-    }
+    
     if (score === winScore) {
       badges.forEach(destroyBadge)
       badges = []
@@ -201,6 +197,7 @@ createBoard(boardData)
   }
 
   function movePlayer() {
+    player = document.querySelector('.player');
     player = moveCharacter(player, 'player')
   }
 
@@ -246,6 +243,8 @@ createBoard(boardData)
         target.classList.contains('next')
       ) {
         createBoard(boardData1)
+
+        
 
       }
 
