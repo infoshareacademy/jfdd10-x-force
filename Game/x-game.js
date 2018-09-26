@@ -95,15 +95,19 @@ function play() {
 
     if (key === 'ArrowUp') {
       direction = 'up';
+      tracer.style.transform = 'rotate(-90deg)'  
     }
     if (key === 'ArrowDown') {
       direction = 'down';
+      tracer.style.transform = 'rotate(90deg)' 
     }
     if (key === 'ArrowRight') {
       direction = 'right';
+      tracer.style.transform = 'rotate(0deg)'  
     }
     if (key === 'ArrowLeft') {
       direction = 'left';
+      tracer.style.transform = 'rotate(180deg)'  
     }
 
   })
@@ -112,19 +116,18 @@ function play() {
 
     if (key === 'ArrowUp') {
       direction = '';
-      tracer.style.transform = 'rotate(-90deg)'  
+       
     }
     if (key === 'ArrowDown') {
       direction = '';
-      tracer.style.transform = 'rotate(90deg)'  
     }
     if (key === 'ArrowRight') {
       direction = '';
-      tracer.style.transform = 'rotate(0deg)'  
+      
     }
     if (key === 'ArrowLeft') {
       direction = '';
-      tracer.style.transform = 'rotate(180deg)'  
+      
     }
 
   })
