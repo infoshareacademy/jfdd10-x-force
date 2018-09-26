@@ -39,10 +39,20 @@
 
 
   .player {
+    /* background : url(/Game/imgGame/survivor.png) center no-repeat;
+    background-size: cover;
+    transition: all 1s ease-in-out; */
+  }
+
+  .tracer{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    transition: all 0.5s, transform 0.2s;
     background : url(/Game/imgGame/survivor.png) center no-repeat;
     background-size: cover;
-    transition: all 1s ease-in-out;
   }
+
 
   .enemy {
     background: red;

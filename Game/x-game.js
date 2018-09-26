@@ -70,11 +70,13 @@ function play() {
   }
 
   var tracer = document.createElement('div');
-  tracer.style.position = 'absolute';
-  tracer.style.width = '20px';
-  tracer.style.height = '20px';
-  tracer.style.background = 'blue';
-  tracer.style.transition = 'all 1s';
+  tracer.classList.add('tracer');
+  // tracer.style.position = 'absolute';
+  // tracer.style.width = '40px';
+  // tracer.style.height = '40px';    
+  // tracer.style.background = 'blue';
+  // tracer.style.transition = 'all 0.2s';
+
 
   grid.appendChild(tracer);
 
@@ -110,19 +112,19 @@ function play() {
 
     if (key === 'ArrowUp') {
       direction = '';
-      player.style.transform = 'rotate(180deg)'  
+      tracer.style.transform = 'rotate(-90deg)'  
     }
     if (key === 'ArrowDown') {
       direction = '';
-      player.style.transform = 'rotate(180deg)'  
+      tracer.style.transform = 'rotate(90deg)'  
     }
     if (key === 'ArrowRight') {
       direction = '';
-      player.style.transform = 'rotate(180deg)'  
+      tracer.style.transform = 'rotate(0deg)'  
     }
     if (key === 'ArrowLeft') {
       direction = '';
-      player.style.transform = 'rotate(180deg)'  
+      tracer.style.transform = 'rotate(180deg)'  
     }
 
   })
