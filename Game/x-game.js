@@ -33,7 +33,14 @@ function play() {
   var grid = document.createElement('div');
   grid.classList.add('grid');
 
+  appContainer.innerHTML = ''
+
   appContainer.appendChild(grid);
+
+  var playerPosition = {
+    x: 0,
+    y: 0
+  }
 
   for (var j = 0; j < boardData.length; j += 1) {
     var row = document.createElement('div');
@@ -61,6 +68,19 @@ function play() {
       row.appendChild(cell);
     }
   }
+
+  var tracer = document.createElement('div');
+  tracer.style.position = 'absolute';
+  tracer.style.width = '20px';
+  tracer.style.height = '20px';
+  tracer.style.background = 'blue';
+  tracer.style.transition = 'all 1s';
+
+  grid.appendChild(tracer);
+
+
+  
+  
 
   document.querySelector('.healthbar').classList.add('health')
 
@@ -90,15 +110,19 @@ function play() {
 
     if (key === 'ArrowUp') {
       direction = '';
+      player.style.transform = 'rotate(180deg)'  
     }
     if (key === 'ArrowDown') {
       direction = '';
+      player.style.transform = 'rotate(180deg)'  
     }
     if (key === 'ArrowRight') {
       direction = '';
+      player.style.transform = 'rotate(180deg)'  
     }
     if (key === 'ArrowLeft') {
       direction = '';
+      player.style.transform = 'rotate(180deg)'  
     }
 
   })
@@ -179,7 +203,11 @@ function play() {
   }
 
   function movePlayer() {
-    player = moveCharacter(player, 'player')
+    player = moveCharacter(player, 'player');
+    var y = +player.getAttribute('data-y');
+    var x = +player.getAttribute('data-x');
+    tracer.style.top = y * 40 + 'px';
+    tracer.style.left = x * 40 + 'px';
   }
 
 
@@ -228,12 +256,25 @@ function play() {
           target.classList.contains('enemy')
         ) {
           var heart= document.querySelectorAll('.heart:last-child').forEach(function (element) {
-            element.classList.remove('heart');
+            element.remove()
           });
          
   
         }
+      } else {
+
+        if (target !== null &&
+          target.classList.contains('player')
+        ) {
+          var heart= document.querySelectorAll('.heart:last-child').forEach(function (element) {
+            element.remove()
+          });
+         
+  
+        }
+
       }
+      
 
     }
     return player;
