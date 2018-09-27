@@ -1,7 +1,7 @@
-function stopGame(bool) {
-    if (bool === true) {
+function stopGame(value) {
+    if (value === true) {
         saveGameState();
-        return;
     }
-    return false;
+
+    return value;
 }

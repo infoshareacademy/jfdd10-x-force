@@ -160,8 +160,10 @@ function play() {
     if (score === winScore) {
       badges.forEach(destroyBadge)
       badges = []
-      stopGame(true);
-      
+      saveGameState();
+      scoreMenu();
+      // stopGame(true);
+      return
     }
 
     if (now - lastEnemyTime > 100) {
