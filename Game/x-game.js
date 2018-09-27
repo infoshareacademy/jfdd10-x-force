@@ -228,18 +228,26 @@ function play() {
       }
 
       const randomKeyDirection = Math.ceil(Math.random() * 4);
-      target = directions[randomDirections[randomKeyDirection]](player);
+      target = (directions[randomDirections[randomKeyDirection]] || function () {
+        return null
+      })(player);
     } else {
       target = (directions[direction] || function () {
         return null
       })(player)
     }
-
-    if (target != null &&
+    if (className === 'player'){
+    console.log(target)
+    }
+    if (
+      target &&
+      target.classList.contains('gridCell') &&
       !target.classList.contains('wall') && !target.classList.contains('enemy')) {
       player.classList.remove(className);
       target.classList.add(className);
       player = target;
+    } else {
+      return player;
     }
 
 
@@ -256,31 +264,22 @@ function play() {
 
 
       if (className === 'player') {
-
-        if (target !== null &&
+        if (target !== null && 
           target.classList.contains('enemy')
         ) {
-          var heart= document.querySelectorAll('.heart:last-child').forEach(function (element) {
+          var heart = document.querySelectorAll('.heart:last-child').forEach(function (element) {
             element.remove()
           });
-         
-  
         }
       } else {
-
         if (target !== null &&
           target.classList.contains('player')
         ) {
           var heart= document.querySelectorAll('.heart:last-child').forEach(function (element) {
             element.remove()
           });
-         
-  
         }
-
       }
-      
-
     }
     return player;
   }
