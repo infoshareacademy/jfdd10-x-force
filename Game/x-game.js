@@ -89,6 +89,8 @@ function play() {
 
 
   var direction = ''
+  var bulletDirection = 'right'
+  var bullet = null
 
   window.addEventListener('keydown', function (event) {
     var key = event.code
@@ -109,6 +111,23 @@ function play() {
       direction = 'left';
       tracer.style.transform = 'rotate(180deg)'  
     }
+    if (key === 'Space') {
+      if (bullet === null) {
+        bullet = directions[bulletDirection](player)
+        bullet.classList.add('bullet')
+        var bulletIntervalId = setInterval(function () {
+          bullet = directions[bulletDirection](bullet)
+          if (bullet) {
+            bullet.classList.add('bullet')
+          } 
+          else {
+            clearInterval(bulletIntervalId)
+          }
+          
+        }, 50)
+      }
+    }
+    bulletDirection = (bullet === null && direction) || bulletDirection
 
   })
   window.addEventListener('keyup', function (event) {
@@ -129,6 +148,8 @@ function play() {
       direction = '';
       
     }
+
+    
 
   })
 
@@ -237,7 +258,7 @@ function play() {
       })(player)
     }
     if (className === 'player'){
-    console.log(target)
+    
     }
     if (
       target &&

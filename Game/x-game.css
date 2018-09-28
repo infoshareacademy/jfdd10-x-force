@@ -88,3 +88,6 @@
     .healthbar{
       margin-top: 20px;
     }
+    .bullet {
+      background: black;
+    }
