@@ -160,8 +160,7 @@ function play() {
     if (score === winScore) {
       badges.forEach(destroyBadge)
       badges = []
-      saveGameState();
-      scoreMenu();
+      saveGameState(score);
       // stopGame(true);
       return
     }
