@@ -81,8 +81,8 @@ function play() {
   grid.appendChild(tracer);
 
 
-  
-  
+
+
 
   document.querySelector('.healthbar').classList.add('health')
 
@@ -97,34 +97,52 @@ function play() {
 
     if (key === 'ArrowUp') {
       direction = 'up';
-      tracer.style.transform = 'rotate(-90deg)'  
+      tracer.style.transform = 'rotate(-90deg)'
     }
     if (key === 'ArrowDown') {
       direction = 'down';
-      tracer.style.transform = 'rotate(90deg)' 
+      tracer.style.transform = 'rotate(90deg)'
     }
     if (key === 'ArrowRight') {
       direction = 'right';
-      tracer.style.transform = 'rotate(0deg)'  
+      tracer.style.transform = 'rotate(0deg)'
     }
     if (key === 'ArrowLeft') {
       direction = 'left';
-      tracer.style.transform = 'rotate(180deg)'  
+      tracer.style.transform = 'rotate(180deg)'
     }
     if (key === 'Space') {
       if (bullet === null) {
         bullet = directions[bulletDirection](player)
-        bullet.classList.add('bullet')
-        var bulletIntervalId = setInterval(function () {
-          bullet = directions[bulletDirection](bullet)
-          if (bullet) {
-            bullet.classList.add('bullet')
-          } 
-          else {
-            clearInterval(bulletIntervalId)
-          }
+        if (bullet &&
+          bullet.classList.contains('gridCell') &&
+          !bullet.classList.contains('wall')
+        ) {
+
+          bullet.classList.add('bullet')
+          var bulletIntervalId = setInterval(function () {
+            bullet.classList.remove('bullet');
+            if (bullet.classList.contains('enemy')){
+              bullet.classList.remove('enemy')
+            }
+            bullet = directions[bulletDirection](bullet)
+            if (
+              bullet &&
+              bullet.classList.contains('gridCell') &&
+              !bullet.classList.contains('wall')
+            ) {
+              bullet.classList.add('bullet')
+            } else {
           
-        }, 50)
+              bullet = null;
+              clearInterval(bulletIntervalId)
+            }
+
+          }, 16)
+        } else {
+          bullet = null
+        }
+
       }
     }
     bulletDirection = (bullet === null && direction) || bulletDirection
@@ -135,21 +153,21 @@ function play() {
 
     if (key === 'ArrowUp') {
       direction = '';
-       
+
     }
     if (key === 'ArrowDown') {
       direction = '';
     }
     if (key === 'ArrowRight') {
       direction = '';
-      
+
     }
     if (key === 'ArrowLeft') {
       direction = '';
-      
+
     }
 
-    
+
 
   })
 
@@ -171,7 +189,7 @@ function play() {
 
   }
 
-  var heart= document.querySelectorAll('.heart');
+  var heart = document.querySelectorAll('.heart');
   var player = document.querySelector('.player');
   var enemies = document.querySelectorAll('.enemy');
   var badges = [];
@@ -217,7 +235,7 @@ function play() {
       return
     }
 
-    if (now - lastEnemyTime > 100) {
+    if (now - lastEnemyTime > 200) {
       document.querySelectorAll('.enemy').forEach(function (enemy) {
         moveCharacter(enemy, 'enemy', true)
         lastEnemyTime = now;
@@ -257,8 +275,8 @@ function play() {
         return null
       })(player)
     }
-    if (className === 'player'){
-    
+    if (className === 'player') {
+
     }
     if (
       target &&
@@ -285,7 +303,7 @@ function play() {
 
 
       if (className === 'player') {
-        if (target !== null && 
+        if (target !== null &&
           target.classList.contains('enemy')
         ) {
           var heart = document.querySelectorAll('.heart:last-child').forEach(function (element) {
@@ -296,7 +314,7 @@ function play() {
         if (target !== null &&
           target.classList.contains('player')
         ) {
-          var heart= document.querySelectorAll('.heart:last-child').forEach(function (element) {
+          var heart = document.querySelectorAll('.heart:last-child').forEach(function (element) {
             element.remove()
           });
         }
