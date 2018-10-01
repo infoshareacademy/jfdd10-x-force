@@ -52,7 +52,7 @@ body, html{
    
     height: auto;
     width: 100%;
-    transition: opacity, 2s;
+    
 }
 
 
@@ -92,8 +92,10 @@ ul .LiTopL:hover{
    
     height: auto;
     width: 100%;
-    transition: opacity, 2s;
+   
+   
 }
+
 .features_img1{
    display: block;
 }

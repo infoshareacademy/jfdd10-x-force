@@ -220,69 +220,69 @@
 
         var i = 0;
         var j = 0;
-        // setInterval(function () {
+        setInterval(function () {
 
-        //     function anim_top_right() {
-
-
-        //         if (i === 3) {
-        //             i = 0;
-        //         }
-        //         if (i === 0) {
-        //             img1.style.opacity = ('1');
-        //             img2.style.opacity = ('0');
-        //             img3.style.opacity = ('0');
-        //         }
-        //         if (i === 1) {
-        //             img1.style.opacity = ('0');
-        //             img2.style.opacity = ('1');
-        //             img3.style.opacity = ('0');
-        //         }
-        //         if (i === 2) {
-        //             img1.style.opacity = ('0');
-        //             img2.style.opacity = ('0');
-        //             img3.style.opacity = ('1');
-        //         }
-        //         i++
-        //     }
+            function anim_top_right() {
 
 
+                if (i === 3) {
+                    i = 0;
+                }
+                if (i === 0) {
+                    img1.style.display = 'block'
+                    img2.style.display = 'none'
+                    img3.style.display = 'none'
+                }
+                if (i === 1) {
+                    img1.style.display = 'none'
+                    img2.style.display = 'block'
+                    img3.style.display = 'none'
+                }
+                if (i === 2) {
+                    img1.style.display = 'none'
+                    img2.style.display = 'none'
+                    img3.style.display = 'block'
+                }
+                i++
+            }
 
-        //     anim_top_right();
+        
 
-        // }, 4000)
+            anim_top_right();
 
-        // setInterval(function () {
+        }, 4000)
 
-
-
-        //     function anim_bot_left() {
-
-
-        //         if (j === 3) {
-        //             j = 0;
-        //         }
-        //         if (j === 0) {
-        //             img4.style.opacity = ('1');
-        //             img5.style.opacity = ('0');
-        //             img6.style.opacity = ('0');
-        //         }
-        //         if (j === 1) {
-        //             img4.style.opacity = ('0');
-        //             img5.style.opacity = ('1');
-        //             img6.style.opacity = ('0');
-        //         }
-        //         if (j === 2) {
-        //             img4.style.opacity = ('0');
-        //             img5.style.opacity = ('0');
-        //             img6.style.opacity = ('1');
-        //         }
-        //         j++;
-        //     }
+        setInterval(function () {
 
 
-        //     anim_bot_left();
-        // }, 3600)
+
+            function anim_bot_left() {
+
+
+                if (j === 3) {
+                    j = 0;
+                }
+                if (j === 0) {
+                     img4.style.display = 'block'
+                    img5.style.display = 'none'
+                    img6.style.display = 'none'
+                }
+                if (j === 1) {
+                     img4.style.display = 'none'
+                    img5.style.display = 'block'
+                    img6.style.display = 'none'
+                }
+                if (j === 2) {
+                     img4.style.display = 'none'
+                    img5.style.display = 'none'
+                    img6.style.display = 'block'
+                }
+                j++;
+            }
+
+
+            anim_bot_left();
+        }, 3600)
 
         var letter = document.querySelector('.letterbefore');
         var circle = document.querySelector('.circle');
