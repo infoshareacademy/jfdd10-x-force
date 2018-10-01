@@ -103,7 +103,7 @@ ul .LiTopL:hover{
 }
 .features_logo{
     width: 60%;
-    height: 60%;
+    height: auto;
     padding-top: 80px;
 }
 
@@ -124,7 +124,7 @@ ul .LiTopL:hover{
 
 .features_description{
     width: 70%;
-    height: 90%;
+    height: auto;
 }
 
 
