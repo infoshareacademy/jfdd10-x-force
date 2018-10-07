@@ -4,6 +4,7 @@ function play() {
     gridNode.remove();
 
   }
+  playerName = prompt("Please enter your name", "test");
 
   var appContainer = document.querySelector('#app');
 
@@ -81,8 +82,8 @@ function play() {
   grid.appendChild(tracer);
 
 
-  
-  
+
+
 
   document.querySelector('.healthbar').classList.add('health')
 
@@ -95,19 +96,19 @@ function play() {
 
     if (key === 'ArrowUp') {
       direction = 'up';
-      tracer.style.transform = 'rotate(-90deg)'  
+      tracer.style.transform = 'rotate(-90deg)'
     }
     if (key === 'ArrowDown') {
       direction = 'down';
-      tracer.style.transform = 'rotate(90deg)' 
+      tracer.style.transform = 'rotate(90deg)'
     }
     if (key === 'ArrowRight') {
       direction = 'right';
-      tracer.style.transform = 'rotate(0deg)'  
+      tracer.style.transform = 'rotate(0deg)'
     }
     if (key === 'ArrowLeft') {
       direction = 'left';
-      tracer.style.transform = 'rotate(180deg)'  
+      tracer.style.transform = 'rotate(180deg)'
     }
 
   })
@@ -116,18 +117,18 @@ function play() {
 
     if (key === 'ArrowUp') {
       direction = '';
-       
+
     }
     if (key === 'ArrowDown') {
       direction = '';
     }
     if (key === 'ArrowRight') {
       direction = '';
-      
+
     }
     if (key === 'ArrowLeft') {
       direction = '';
-      
+
     }
 
   })
@@ -150,7 +151,7 @@ function play() {
 
   }
 
-  var heart= document.querySelectorAll('.heart');
+  var heart = document.querySelectorAll('.heart');
   var player = document.querySelector('.player');
   var enemies = document.querySelectorAll('.enemy');
   var badges = [];
@@ -193,7 +194,7 @@ function play() {
     if (score === winScore) {
       badges.forEach(destroyBadge)
       badges = []
-      saveGameState(score);
+      saveGameState(score, playerName);
       // stopGame(true);
       return
     }
@@ -238,8 +239,8 @@ function play() {
         return null
       })(player)
     }
-    if (className === 'player'){
-    console.log(target)
+    if (className === 'player') {
+      console.log(target)
     }
     if (
       target &&
@@ -261,12 +262,11 @@ function play() {
         target.classList.remove('badge');
         scorePoint();
         badges = badges.filter(function (badge) { return badge !== target });
-
       }
 
 
       if (className === 'player') {
-        if (target !== null && 
+        if (target !== null &&
           target.classList.contains('enemy')
         ) {
           var heart = document.querySelectorAll('.heart:last-child').forEach(function (element) {
@@ -277,7 +277,7 @@ function play() {
         if (target !== null &&
           target.classList.contains('player')
         ) {
-          var heart= document.querySelectorAll('.heart:last-child').forEach(function (element) {
+          var heart = document.querySelectorAll('.heart:last-child').forEach(function (element) {
             element.remove()
           });
         }
