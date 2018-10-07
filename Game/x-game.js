@@ -4,7 +4,7 @@ function play() {
     gridNode.remove();
 
   }
-  playerName = prompt("Please enter your name", "test");
+  playerName = prompt("Please enter your name:", "player");
 
   var appContainer = document.querySelector('#app');
 
