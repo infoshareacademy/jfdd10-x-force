@@ -33,7 +33,14 @@ function play() {
   var grid = document.createElement('div');
   grid.classList.add('grid');
 
+  appContainer.innerHTML = ''
+
   appContainer.appendChild(grid);
+
+  var playerPosition = {
+    x: 0,
+    y: 0
+  }
 
   for (var j = 0; j < boardData.length; j += 1) {
     var row = document.createElement('div');
@@ -62,6 +69,25 @@ function play() {
     }
   }
 
+  var tracer = document.createElement('div');
+  tracer.classList.add('tracer');
+  // tracer.style.position = 'absolute';
+  // tracer.style.width = '40px';
+  // tracer.style.height = '40px';    
+  // tracer.style.background = 'blue';
+  // tracer.style.transition = 'all 0.2s';
+
+
+  grid.appendChild(tracer);
+
+
+  
+  
+
+  document.querySelector('.healthbar').classList.add('health')
+
+
+
   var direction = ''
 
   window.addEventListener('keydown', function (event) {
@@ -69,15 +95,19 @@ function play() {
 
     if (key === 'ArrowUp') {
       direction = 'up';
+      tracer.style.transform = 'rotate(-90deg)'  
     }
     if (key === 'ArrowDown') {
       direction = 'down';
+      tracer.style.transform = 'rotate(90deg)' 
     }
     if (key === 'ArrowRight') {
       direction = 'right';
+      tracer.style.transform = 'rotate(0deg)'  
     }
     if (key === 'ArrowLeft') {
       direction = 'left';
+      tracer.style.transform = 'rotate(180deg)'  
     }
 
   })
@@ -86,15 +116,18 @@ function play() {
 
     if (key === 'ArrowUp') {
       direction = '';
+       
     }
     if (key === 'ArrowDown') {
       direction = '';
     }
     if (key === 'ArrowRight') {
       direction = '';
+      
     }
     if (key === 'ArrowLeft') {
       direction = '';
+      
     }
 
   })
@@ -117,7 +150,7 @@ function play() {
 
   }
 
-
+  var heart= document.querySelectorAll('.heart');
   var player = document.querySelector('.player');
   var enemies = document.querySelectorAll('.enemy');
   var badges = [];
@@ -177,7 +210,11 @@ function play() {
   }
 
   function movePlayer() {
-    player = moveCharacter(player, 'player')
+    player = moveCharacter(player, 'player');
+    var y = +player.getAttribute('data-y');
+    var x = +player.getAttribute('data-x');
+    tracer.style.top = y * 40 + 'px';
+    tracer.style.left = x * 40 + 'px';
   }
 
 
@@ -193,18 +230,26 @@ function play() {
       }
 
       const randomKeyDirection = Math.ceil(Math.random() * 4);
-      target = directions[randomDirections[randomKeyDirection]](player);
+      target = (directions[randomDirections[randomKeyDirection]] || function () {
+        return null
+      })(player);
     } else {
       target = (directions[direction] || function () {
         return null
       })(player)
     }
-
-    if (target != null &&
+    if (className === 'player'){
+    console.log(target)
+    }
+    if (
+      target &&
+      target.classList.contains('gridCell') &&
       !target.classList.contains('wall') && !target.classList.contains('enemy')) {
       player.classList.remove(className);
       target.classList.add(className);
       player = target;
+    } else {
+      return player;
     }
 
 
@@ -219,6 +264,24 @@ function play() {
 
       }
 
+
+      if (className === 'player') {
+        if (target !== null && 
+          target.classList.contains('enemy')
+        ) {
+          var heart = document.querySelectorAll('.heart:last-child').forEach(function (element) {
+            element.remove()
+          });
+        }
+      } else {
+        if (target !== null &&
+          target.classList.contains('player')
+        ) {
+          var heart= document.querySelectorAll('.heart:last-child').forEach(function (element) {
+            element.remove()
+          });
+        }
+      }
     }
     return player;
   }
