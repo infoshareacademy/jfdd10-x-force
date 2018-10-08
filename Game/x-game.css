@@ -7,6 +7,7 @@
   display: flex;
   position: relative;
   background: url(/Game/imgGame/cobble.jpg);
+  /* background-size: 40px 40px; */
   flex: 1 1 0;
 }
 .grid {
@@ -33,9 +34,26 @@
     margin: 0;
   }
   .badge{
+    display: flex;
+   justify-content: center;
+   align-items: center
+  }
+
+
+  .badge:before{
+    width: 70%;
+    height: 70%;
+    display: block;
+    content:'';
     background: url(/Game/imgGame/coin.jpg) center;
     background-size: 100% 100%;
+    border-radius: 50%;
+    box-shadow: 0 -1px 09px 05px rgb(216, 180, 22);
   }
+
+
+
+
 
 /* 
   .player {
@@ -55,7 +73,10 @@
 
 
   .enemy {
-    background: red;
+    background: url(/img/monster.png);
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    border-radius: 40%;
   }
 
   .wall {
@@ -87,4 +108,8 @@
 
     .healthbar{
       margin-top: 20px;
+    }
+    .bullet {
+      background: black;
+      
     }

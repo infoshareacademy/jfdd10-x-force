@@ -90,6 +90,8 @@ function play() {
 
 
   var direction = ''
+  var bulletDirection = 'right'
+  var bullet = null
 
   window.addEventListener('keydown', function (event) {
     var key = event.code
@@ -110,6 +112,41 @@ function play() {
       direction = 'left';
       tracer.style.transform = 'rotate(180deg)'
     }
+    if (key === 'Space') {
+      if (bullet === null) {
+        bullet = directions[bulletDirection](player)
+        if (bullet &&
+          bullet.classList.contains('gridCell') &&
+          !bullet.classList.contains('wall')
+        ) {
+
+          bullet.classList.add('bullet')
+          var bulletIntervalId = setInterval(function () {
+            bullet.classList.remove('bullet');
+            if (bullet.classList.contains('enemy')){
+              bullet.classList.remove('enemy')
+            }
+            bullet = directions[bulletDirection](bullet)
+            if (
+              bullet &&
+              bullet.classList.contains('gridCell') &&
+              !bullet.classList.contains('wall')
+            ) {
+              bullet.classList.add('bullet')
+            } else {
+          
+              bullet = null;
+              clearInterval(bulletIntervalId)
+            }
+
+          }, 16)
+        } else {
+          bullet = null
+        }
+
+      }
+    }
+    bulletDirection = (bullet === null && direction) || bulletDirection
 
   })
   window.addEventListener('keyup', function (event) {
@@ -130,6 +167,8 @@ function play() {
       direction = '';
 
     }
+
+
 
   })
 
@@ -199,7 +238,7 @@ function play() {
       return
     }
 
-    if (now - lastEnemyTime > 100) {
+    if (now - lastEnemyTime > 200) {
       document.querySelectorAll('.enemy').forEach(function (enemy) {
         moveCharacter(enemy, 'enemy', true)
         lastEnemyTime = now;
@@ -240,7 +279,6 @@ function play() {
       })(player)
     }
     if (className === 'player') {
-      console.log(target)
     }
     if (
       target &&
