@@ -190,10 +190,7 @@
         .t-bot p:last-child{
             margin-top: 0px;
         }
-        .t-links{
-            display: inline;
-            
-        }
+      
 
        .t-links i{
            font-size: 40px;
@@ -226,10 +223,7 @@
             .t-bot p:last-child{
                 margin-top: 0px;
             }
-            .t-links{
-                display: inline;
-                
-            }
+           
     
            .t-links i{
                font-size: 40px;
