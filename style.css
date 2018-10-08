@@ -44,7 +44,7 @@ body, html{
 }
 
 .topL{
-    background: rgba(17, 0, 255, 0.562);
+    background: rgba(255, 255, 255, 0.562);
     
     height: auto;
 }
@@ -84,7 +84,7 @@ ul .LiTopL:hover{
 }
 
 .topP{
-    background: rgba(17, 0, 255, 0.562);
+    background: rgba(255, 255, 255, 0.562);
     
     height: auto;
 }
