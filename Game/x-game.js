@@ -4,6 +4,7 @@ function play() {
     gridNode.remove();
 
   }
+  playerName = prompt("Please enter your name:", "player");
 
   var appContainer = document.querySelector('#app');
 
@@ -232,6 +233,8 @@ function play() {
     if (score === winScore) {
       badges.forEach(destroyBadge)
       badges = []
+      saveGameState(score, playerName);
+      // stopGame(true);
       return
     }
 
@@ -276,7 +279,6 @@ function play() {
       })(player)
     }
     if (className === 'player') {
-
     }
     if (
       target &&
@@ -298,7 +300,6 @@ function play() {
         target.classList.remove('badge');
         scorePoint();
         badges = badges.filter(function (badge) { return badge !== target });
-
       }
 
 
