@@ -1,5 +1,6 @@
 function play() {
   var gridNode = document.querySelector('.grid');
+  var life = 3;
   if (gridNode) {
     gridNode.remove();
 
@@ -246,6 +247,11 @@ function play() {
       })
     }
 
+    if (life === 0) {
+      alert('YOU LOSE');
+      window.location.href = '/Game/x-game.html';
+    }
+
     requestAnimationFrame(update);
   }
 
@@ -316,6 +322,7 @@ function play() {
           target.classList.contains('player')
         ) {
           var heart = document.querySelectorAll('.heart:last-child').forEach(function (element) {
+            life = life - 1;
             element.remove()
           });
         }
