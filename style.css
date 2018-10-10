@@ -304,14 +304,18 @@ ul .LiTopL:hover{
         height: auto;
         margin: 0 auto;
         display: flex;
-        flex-direction: column
+        flex-direction: column;
+        
+        
+
     }
 
     .features{
         width: 100%;
         height: 100%;
         height: auto;
-     
+        
+       
 
 
     }
@@ -321,7 +325,8 @@ ul .LiTopL:hover{
         height: auto;
         margin: 0 auto;
         display: flex;
-        flex-direction: column
+        flex-direction: column;
+        
     }
     
     }
