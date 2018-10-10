@@ -119,19 +119,6 @@
 
 /*Mobile styles*/
 
-@media (max-width: 821px)  {
-
-.nav-menu ul {
-    display: block;
-}
-
-.nav-menu {
-    top: -430px;
-    
-}    
-
-}
-
 
 .action-menu-button {
     animation: shake 2.82s infinite cubic-bezier(.36,.10,.19,.97) both;
@@ -160,3 +147,30 @@
       transform: translate3d( 0px, 5px, 0);
     }
   }
+
+
+/*Mobile styles*/
+
+  @media (max-width: 821px)  {
+
+    .nav-menu ul {
+        display: block;
+    }
+    
+    .nav-menu {
+        top: -430px;
+        
+    }    
+
+
+    #menuToggle { display: none; }
+    #menuToggle:checked ~ .nav-menu { position: fixed; top: -420px; }
+
+   .nav-menu:hover {
+    top: 0;
+   }
+    
+    }
+
+
+    
