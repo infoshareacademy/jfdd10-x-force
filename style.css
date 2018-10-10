@@ -297,7 +297,7 @@ ul .LiTopL:hover{
     }
 }
 
-@media (max-width: 576px)  {
+@media (max-width: 640px)  {
 
     .featuresBox{
         width: 100%;
