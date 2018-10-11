@@ -12,6 +12,10 @@ text {
   fill: #FF9800;
 }
 
+.invitation-parallax{
+    display: flex;
+    justify-content: center
+}
 
 
 .form {
@@ -40,7 +44,7 @@ text {
 .subscribe{
     display: flex;
     position: absolute;
-    margin: 0 50% 0 40%;
+   
     
 }
 
@@ -219,7 +223,7 @@ background: #6ed3cf;
 
 .nameinput {
     margin-left: 0;
-    margin-right: 2000px;
+    margin-right: 2px;
     overflow: hidden;
 }
 
