@@ -202,6 +202,8 @@ ul .LiTopL:hover{
 .invitation-parallax{
     
     position: relative;
+    display: flex;
+    justify-content: center;
     background-repeat: no-repeat;
     height: 100%;
     background: url(/img/tłopod.png) ;
