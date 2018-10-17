@@ -14,7 +14,7 @@ text {
 
 .invitation-parallax{
     display: flex;
-    justify-content: center
+    /* justify-content: center */
 }
 
 
@@ -24,7 +24,7 @@ text {
     background: rgb(2, 31, 94);
     /* margin: 0 auto; */
     margin-top: 50px;
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(243, 234, 222);
     font-family: Foncik;
     text-align: center;
@@ -57,13 +57,13 @@ text {
     display: flex;
     position: absolute;
     /* margin: 0 50% 0 40%; */
-    margin: 0 auto;
+    /* margin: 0 auto; */
     
 }
 
 .letterbefore {
     height: 39vh;
-    width: 20vw;
+    width: 24vw;
     background: #e1e8f0;
     border-radius: 5%;
     z-index: 0;
@@ -72,10 +72,10 @@ text {
     position: relative;
     bottom: -50px;
     /* right: -2px; */
-    padding-top: 20vh;
+    /* padding-top: 20vh;
     padding-bottom: 20vh;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 20px; */
    
 
 
@@ -97,14 +97,16 @@ text {
     background:rgb(41, 171, 226);
     margin: 0 auto;
     margin-top: 20vh;
-    font-size: 15px;
+    font-size: 25px;
     width: 50%;
-    padding: 20px;
+    /* height: 2%;
+    width: 5%; */
+    padding: 50px;
     /* width: 100%; */
     /* position: absolute; */
     z-index: 1; 
     cursor: pointer;
-    text-align: center;
+    /* text-align: center; */
     transition: background-color, 0.5s;
 }
 .circle:hover{
@@ -117,21 +119,24 @@ text {
 } */
 
 .letterafter {
-    height: 39vh;
-    width: 20vw;
+    height: 79vh;
+    width: 24vw;
     background: #e1e8f0;
     z-index: 1000;
-    margin-left: 0px;
-
+    /* margin-left: 0px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     position: relative;
-    bottom: -50px;
+    /* bottom: -50px; */
     /* right: -50px; */
     animation-duration: 2s;
     animation-name: slidein;
-    padding-top: 20vh;
+    /* padding-top: 20vh;
     padding-bottom: 20vh;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 20px; */
    
 }
 
@@ -176,7 +181,7 @@ text {
     background: transparent;
     border: none;
     border-bottom: 1px dashed #83A4C5;
-    width: 275px;
+    width: 100%;
     outline: none;
     padding: 0px 0px 0px 0px;
     font-style: italic;
@@ -209,32 +214,37 @@ text {
     background: #e62739;
     border: none;
     /* padding: 18px 20px 18px 20px; */
-    padding: 10px;
+
+    padding: 30px;
     border-radius: 5px;
     color: #A8BACE;
     margin: 0 auto;
     margin-top: 10vh;
-    align-self: flex-end;
-    align-items: flex-end;
+    width: 100%;
     
 }
 
 .letter-sent {
 
-    height: 50vh;
-    width: 20vw;
+    height: 79vh;
+    width: 24vw;
     background: #e1e8f0;
     z-index: 0;
     margin-left: 0px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
     position: relative;
-    bottom: -240px;
+    /* bottom: -240px;
     right: -20px;
     padding: 20px;
 
     position: relative;
     bottom: -240px;
-    right: -20px;
+    right: -20px; */
     animation-duration: 2s;
     animation-name: slideout;
 
@@ -251,7 +261,7 @@ background: #6ed3cf;
     margin-top: 5vh;
     text-align: center;
     margin-left: 10px;
-    font-size: 10px;
+    font-size: 20px;
     width: 100%;
     margin-left: 0;
 }
@@ -262,7 +272,7 @@ background: #6ed3cf;
     text-align: center;
     margin-left: 10px;
     display: block; */
-    font-size: 10px;
+    font-size: 20px;
     overflow: hidden;
     width: 100%;
     margin-top: 5vh;
@@ -317,3 +327,73 @@ background: #6ed3cf;
           margin-left: 0;
       } 
 }
+
+
+/* Mobile Styles */
+
+@media (min-width: 380px) { 
+
+    
+    
+}
+
+
+
+@media (min-width: 576px) { 
+
+    
+}
+ 
+@media (min-width: 768px) { 
+
+    
+}
+    
+@media (max-width:1000px) {
+
+    .form {
+        width: 70vw;
+        
+    }
+    
+    .letterbefore {
+        width: 70vw;
+    }
+
+    .form .circle {
+        padding: 20px;
+        font-size: 15px;
+    }
+
+         
+       
+    }
+
+        
+    @media (max-width:1170px) {
+        
+        .form {
+            width: 60vw;
+            
+        }
+        
+        .letterbefore {
+            width: 60vw;
+        }
+
+
+    }
+
+    @media (max-width:1450px) {
+        
+        .form {
+            width: 30vw;
+            
+        }
+        
+        .letterbefore {
+            width: 30vw;
+        }
+
+
+    }
