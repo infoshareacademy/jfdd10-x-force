@@ -12,6 +12,10 @@ text {
   fill: #FF9800;
 }
 
+.invitation-parallax{
+    display: flex;
+    justify-content: center
+}
 
 
 .form {

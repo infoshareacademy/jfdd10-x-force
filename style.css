@@ -299,3 +299,36 @@ ul .LiTopL:hover{
     }
 }
 
+@media (max-width: 640px)  {
+
+    .featuresBox{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        
+        
+
+    }
+
+    .features{
+        width: 100%;
+        height: 100%;
+        height: auto;
+        
+       
+
+
+    }
+    
+    .featuresBox1{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    }
