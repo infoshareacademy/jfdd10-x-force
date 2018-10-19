@@ -118,20 +118,17 @@
 } */
 
 
-/*Mobile styles*/
-
-
 .action-menu-button {
     animation: shake 2.82s infinite cubic-bezier(.36,.10,.19,.97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
-    perspective: 1002px;
+    perspective: 1000px;
     animation-timing-function: linear;
     font-size: 30px
 
 }
 .arrow-span {
-    transition: transform 3s;
+    transition: transform 1s;
 }
 
 
@@ -154,6 +151,9 @@
   }
 
 
+
+
+
 /*Mobile styles*/
 
   @media (max-width: 821px)  {
@@ -171,18 +171,14 @@
     }    
 
 
-    #menuToggle { display: none; }
-    #menuToggle:checked ~ .nav-menu { position: fixed; top: -434px; }
-
-   .nav-menu:hover {
-    top: 0;
-   }
+    
+   
    .nav-menu a { 
     background: rgb(12, 8, 51);
 	display: block; 
     padding: 25px;
     padding-inline-start: 1px;
-    margin:  2px auto;
+    
     color: #F0EADC;
     text-decoration: none;
     flex: 1 1 0;
