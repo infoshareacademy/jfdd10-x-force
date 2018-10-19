@@ -114,6 +114,7 @@
 
 .nav-menu:hover {
     top: 0;
+
 }
 
 
@@ -124,7 +125,7 @@
     animation: shake 2.82s infinite cubic-bezier(.36,.10,.19,.97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
-    perspective: 1000px;
+    perspective: 1002px;
     animation-timing-function: linear;
     font-size: 30px
 
