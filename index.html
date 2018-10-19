@@ -38,7 +38,7 @@
                 
             </ul>
 
-            <label for="menuToggle" class="nav-menu-icon"><p class="action-menu-button">&#x21d3;</p></label>
+            <label for="menuToggle" class="nav-menu-icon"><div class="action-menu-button"><div class="arrow-span">&#x21d3;</div></div></label>
         </nav>
     </div>
 
@@ -290,11 +290,31 @@
         var circle = document.querySelector('.circle');
         var send = document.querySelector('.send')
         var subscribeForm = document.querySelector('#subscribe_form')
-
+        var actionButton = document.querySelector('.arrow-span')
+        var rotated = false;
+    
 
         circle.addEventListener('click', animate)
         send.addEventListener('click', sent)
 
+
+        // function rotateButton(event) {
+        //     actionButton.style.transform = 'rotate' + '(180deg)'
+        // }
+
+        actionButton.addEventListener('click', function(){
+            if (rotated === false) {
+        rotated = true        
+        actionButton.style.transform = 'rotate' + '(180deg)'
+        console.log(rotated)
+        return
+            }
+            if (rotated === true) {             
+        actionButton.style.transform = 'rotate' + '(0)'
+        rotated = false 
+            }          
+        })
+        
 
         function sent(event) {
             if (subscribeForm.checkValidity()) {

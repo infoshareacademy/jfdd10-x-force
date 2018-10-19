@@ -125,8 +125,12 @@
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
-    animation-timing-function: linear
+    animation-timing-function: linear;
+    font-size: 30px
 
+}
+.arrow-span {
+    transition: transform 3s;
 }
 
 
