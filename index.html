@@ -10,15 +10,18 @@
     <link rel="Stylesheet" type="text/css" href="style.css" />
     <link rel="Stylesheet" type="text/css" href="team.css" />
     <link rel="Stylesheet" type="text/css" href="form.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
+
 
 <body>
 
     <div class="wrapper">
         <input type="checkbox" id="menuToggle">
         <nav class="nav-menu sticky">
-            <ul>
+            <ul class="smoothScrool">
                 <li>
                     <a href="#home"><p>HOME</p></a>
                 </li>
@@ -32,7 +35,7 @@
                     <a href="#contact"><p>CONTACT</p></a>
                 </li>
                 <li>
-                    <a href="#"><p>FEATURES</p></a>
+                    <a href="#contact"><p>FEATURES</p></a>
                 </li>
                 <li><a href="/Game/x-game.html"><p>GAME</p></a></li>
                 
@@ -200,11 +203,35 @@
     </div>
 
 
-
-
-    <script src="/smoothScroll.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+    $(document).ready(function(){
+     
+      $("a").on('click', function(event) {
+    
+        
+        if (this.hash !== "") {
+     
+          event.preventDefault();
+    
+         
+          var hash = this.hash;
+    
+         
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+       
+          
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+    </script>
+    
+    <script>
+        
 
 
 
@@ -348,6 +375,7 @@
             
         }
     </script>
+    
 </body>
 
 </html>
