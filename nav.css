@@ -19,9 +19,9 @@
     background: #E5DAC0; color: #333;    
 }
 
-.nav-menu-icon:hover {
+/* .nav-menu-icon:hover {
     background: #E5DAC0; color: #333; 
-}
+} */
 
 
 
@@ -54,7 +54,7 @@
 
 .nav-menu-icon {
     color: #F0EADC; 
-    font-size: 25px;
+    font-size: 23px;
     display: block;
     padding: 10px 20px;
 	cursor: pointer;
@@ -112,12 +112,10 @@
 #menuToggle { display: none; }
 #menuToggle:checked ~ .nav-menu { position: fixed; top: 0; }
 
-.nav-menu:hover {
+/* .nav-menu:hover {
     top: 0;
-}
 
-
-/*Mobile styles*/
+} */
 
 
 .action-menu-button {
@@ -125,8 +123,12 @@
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
-    animation-timing-function: linear
+    animation-timing-function: linear;
+    font-size: 30px
 
+}
+.arrow-span {
+    transition: transform 1s;
 }
 
 
@@ -149,27 +151,47 @@
   }
 
 
+
+
+
 /*Mobile styles*/
 
   @media (max-width: 821px)  {
+    #menuToggle { display: none; }
+    #menuToggle:checked ~ .nav-menu { position: fixed; top: 0; }
 
     .nav-menu ul {
         display: block;
     }
     
     .nav-menu {
-        top: -430px;
+        top: -420px;
         width: 29%
         
     }    
 
 
-    #menuToggle { display: none; }
-    #menuToggle:checked ~ .nav-menu { position: fixed; top: -420px; }
+    
+   
+   .nav-menu a { 
+    background: rgb(12, 8, 51);
+	display: block; 
+    padding: 25px;
+    padding-inline-start: 1px;
+    
+    color: #F0EADC;
+    text-decoration: none;
+    flex: 1 1 0;
+    transition: all .1s ease-out;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+}
 
-   .nav-menu:hover {
-    top: 0;
-   }
+.nav-menu a:hover { 
+    background: #E5DAC0; color: #333;    
+}
     
     }
 

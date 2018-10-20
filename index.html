@@ -10,15 +10,18 @@
     <link rel="Stylesheet" type="text/css" href="style.css" />
     <link rel="Stylesheet" type="text/css" href="team.css" />
     <link rel="Stylesheet" type="text/css" href="form.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
+
 
 <body>
 
     <div class="wrapper">
         <input type="checkbox" id="menuToggle">
         <nav class="nav-menu sticky">
-            <ul>
+            <ul class="smoothScrool">
                 <li>
                     <a href="#home"><p>HOME</p></a>
                 </li>
@@ -32,13 +35,13 @@
                     <a href="#contact"><p>CONTACT</p></a>
                 </li>
                 <li>
-                    <a href="#"><p>FEATURES</p></a>
+                    <a href="#about"><p>FEATURES</p></a>
                 </li>
                 <li><a href="/Game/x-game.html"><p>GAME</p></a></li>
                 
             </ul>
 
-            <label for="menuToggle" class="nav-menu-icon"><p class="action-menu-button">&#x21d3;</p></label>
+            <label for="menuToggle" class="nav-menu-icon"><div class="action-menu-button"><div class="arrow-span">&#x21d3;</div></div></label>
         </nav>
     </div>
 
@@ -200,7 +203,38 @@
     </div>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+    $(document).ready(function(){
+     
+      $("a").on('click', function(event) {
+    
+        
+        if (this.hash !== "") {
+     
+          event.preventDefault();
+    
+         
+          var hash = this.hash;
+    
+         
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 1000, function(){
+       
+          
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+    </script>
+    
+    <script>
+        
+
+
+
 
         var flyMan = document.querySelector('.head-parallax');
 
@@ -290,11 +324,31 @@
         var circle = document.querySelector('.circle');
         var send = document.querySelector('.send')
         var subscribeForm = document.querySelector('#subscribe_form')
-
+        var actionButton = document.querySelector('.arrow-span')
+        var rotated = false;
+    
 
         circle.addEventListener('click', animate)
         send.addEventListener('click', sent)
 
+
+        // function rotateButton(event) {
+        //     actionButton.style.transform = 'rotate' + '(180deg)'
+        // }
+
+        actionButton.addEventListener('click', function(){
+            if (rotated === false) {
+        rotated = true        
+        actionButton.style.transform = 'rotate' + '(180deg)'
+        console.log(rotated)
+        return
+            }
+            if (rotated === true) {             
+        actionButton.style.transform = 'rotate' + '(0)'
+        rotated = false 
+            }          
+        })
+        
 
         function sent(event) {
             if (subscribeForm.checkValidity()) {
@@ -321,6 +375,7 @@
             
         }
     </script>
+    
 </body>
 
 </html>
