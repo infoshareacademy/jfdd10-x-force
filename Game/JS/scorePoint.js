@@ -1,6 +1,6 @@
 var score = 0;
-var givePoint = 2;
-var winScore = 4;
+var givePoint = 1;
+var winScore = 10;
 var winText = 'You win!!!';
 var dateTime = new Date();
 
